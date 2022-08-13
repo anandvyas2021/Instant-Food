@@ -1,8 +1,8 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from "react";
 
-import CartIcon from '../../Cart/CartIcon';
-import styles from './HeaderCartButton.module.css';
-import CartContext from '../../store/cart-context';
+import CartIcon from "Cart/CartIcon";
+import styles from "./styles.module.css";
+import CartContext from "store/cart-context";
 
 const HeaderCartButton = (props) => {
   const [btnHighlighted, setBtnHighlighted] = useState(false);
@@ -14,7 +14,7 @@ const HeaderCartButton = (props) => {
     return curNumber + item.amount;
   }, 0);
 
-  const btnClasses = `${styles.button} ${btnHighlighted ? styles.bump : ''}`;
+  const btnClasses = `${styles.button} ${btnHighlighted ? styles.bump : ""}`;
 
   useEffect(() => {
     if (items.length === 0) {
