@@ -47,14 +47,14 @@
   font-size: 17px;
   font-weight: 600;
   margin-right: 0.5rem;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
 }
 
 .nav-list li {
   height: 100%;
   margin-right: 30px;
   align-items: center;
-  background-color: chartreuse;
+  /* background-color: chartreuse; */
 }
 
 .nav-list li:hover {
@@ -66,13 +66,15 @@
   display: flex;
   align-items: center;
   height: 100%;
-  background-color: red;
+  /* background-color: red; */
 }
 .nav-links {
   display: flex;
   align-items: center;
   text-decoration: none;
   color: inherit;
+  line-height: 0;
+  gap: 5px;
 }
 
 .nav-links img {

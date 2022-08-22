@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import MealsImg from "assets/meals.jpg";
 import logo from "assets/restaurant.png";
 
-import HeaderCartButton from "Components/CartButton";
+import HeaderCartButton from "components/cartButton";
 import { navList } from "config";
 import styles from "./styles.module.css";
 import { NavLink } from "react-router-dom";

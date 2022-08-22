@@ -1,9 +1,9 @@
-import React, { useState, useContext } from 'react';
-import styles from './Cart.module.css';
-import Modal from '../Components/UI/Modal';
-import CartItems from './CartItems';
-import CartContext from '../store/cart-context';
-import Checkout from './Checkout';
+import React, { useState, useContext } from "react";
+import styles from "./Cart.module.css";
+import Modal from "../components/UI/Modal";
+import CartItems from "./CartItems";
+import CartContext from "../store/cart-context";
+import Checkout from "./Checkout";
 
 const Cart = (props) => {
   const [isCheckOut, setIsCheckOut] = useState(false);
@@ -29,9 +29,9 @@ const Cart = (props) => {
   const confirmSubmitOrderHandler = async (userData) => {
     setIsSubmitting(true);
     await fetch(
-      'https://food-order-6bf1c-default-rtdb.firebaseio.com/orders.json',
+      "https://food-order-6bf1c-default-rtdb.firebaseio.com/orders.json",
       {
-        method: 'POST',
+        method: "POST",
         body: JSON.stringify({ user: userData, orderedItems: cartCtx.items }),
       }
     );
@@ -41,7 +41,7 @@ const Cart = (props) => {
   };
 
   const cartItem = (
-    <ul className={styles['cart-items']}>
+    <ul className={styles["cart-items"]}>
       {cartCtx.items.map((item) => (
         <CartItems
           key={item.id}
@@ -57,7 +57,7 @@ const Cart = (props) => {
 
   const modalActions = (
     <div className={styles.actions}>
-      <button className={styles['button--alt']} onClick={props.onHideCart}>
+      <button className={styles["button--alt"]} onClick={props.onHideCart}>
         Close
       </button>
       {hasItems && (
