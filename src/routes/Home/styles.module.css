@@ -1,0 +1,21 @@
+.main-image-section {
+  width: 100%;
+  height: 25rem;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.main-image-section img {
+  width: 110%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
+}
+
+.home-carousel-container {
+  /* box-sizing: border-box; */
+  height: 340px;
+  background-color: #171a29;
+  margin: 3rem 0;
+  padding: 40px;
+}

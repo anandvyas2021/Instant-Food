@@ -6,9 +6,12 @@ import CartContext from "../store/cart-context";
 import Checkout from "./Checkout";
 
 const Cart = (props) => {
-  const [isCheckOut, setIsCheckOut] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [state, setState] = useState({
+    isCheckOut: false,
+    isSubmitting: false,
+    isSubmitted: false,
+  });
+
   const cartCtx = useContext(CartContext);
   const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`;
   const hasItems = cartCtx.items.length > 0;
@@ -23,11 +26,11 @@ const Cart = (props) => {
 
   const orderHandler = (event) => {
     event.preventDefault();
-    setIsCheckOut(true);
+    setState({ isCheckOut: true });
   };
 
   const confirmSubmitOrderHandler = async (userData) => {
-    setIsSubmitting(true);
+    setState({ isSubmitting: true });
     await fetch(
       "https://food-order-6bf1c-default-rtdb.firebaseio.com/orders.json",
       {
@@ -35,8 +38,7 @@ const Cart = (props) => {
         body: JSON.stringify({ user: userData, orderedItems: cartCtx.items }),
       }
     );
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    setState({ isSubmitting: false, isSubmitted: true });
     cartCtx.clearCart();
   };
 
@@ -57,7 +59,10 @@ const Cart = (props) => {
 
   const modalActions = (
     <div className={styles.actions}>
-      <button className={styles["button--alt"]} onClick={props.onHideCart}>
+      <button
+        className={styles["button--alt"]}
+        onClick={props.toggleModalHandler}
+      >
         Close
       </button>
       {hasItems && (
@@ -75,13 +80,13 @@ const Cart = (props) => {
         <span>Total Amount</span>
         <span>{totalAmount}</span>
       </div>
-      {isCheckOut && (
+      {state.isCheckOut && (
         <Checkout
           onConfirm={confirmSubmitOrderHandler}
-          onHideCart={props.onHideCart}
+          toggleModalHandler={props.toggleModalHandler}
         />
       )}
-      {!isCheckOut && modalActions}
+      {!state.isCheckOut && modalActions}
     </React.Fragment>
   );
 
@@ -91,7 +96,7 @@ const Cart = (props) => {
     <React.Fragment>
       <p>Successfully sent the order!</p>
       <div className={styles.actions}>
-        <button className={styles.button} onClick={props.onHideCart}>
+        <button className={styles.button} onClick={props.toggleModalHandler}>
           Close
         </button>
       </div>
@@ -99,10 +104,10 @@ const Cart = (props) => {
   );
 
   return (
-    <Modal onHideCart={props.onHideCart}>
-      {!isSubmitting && !isSubmitted && cartModalContent}
-      {isSubmitting && SubmittingForm}
-      {isSubmitted && isSubmitted && SubmittedForm}
+    <Modal toggleModalHandler={props.toggleModalHandler}>
+      {!state.isSubmitting && !state.isSubmitted && cartModalContent}
+      {state.isSubmitting && SubmittingForm}
+      {state.isSubmitted && SubmittedForm}
     </Modal>
   );
 };

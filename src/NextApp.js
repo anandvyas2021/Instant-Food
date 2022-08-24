@@ -1,36 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Header from "container/Header";
-import Meals from "components/meals/Meals";
-import Cart from "cart/Cart";
-
 import CartProvider from "store/CartProvider";
-
 import App from "container/App";
-import NoRoute from "custom/NoRoute";
+
+// import NoRoute from "custom/NoRoute";
+// import Meals from "components/meals/Meals";
 
 export default function NextApp() {
-  // const [toggleModal, setToggleModal] = useState(false);
-
-  // const showCart = () => {
-  //   setToggleModal(true);
-  // };
-  // const hideCart = () => {
-  //   setToggleModal(false);
-  // };
-
   return (
     <CartProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<App />} />
+          <Route path="*" element={<App />} />
           {/* <Route path="*" element={<NoRoute />} /> */}
         </Routes>
-        {/* {toggleModal && <Cart onHideCart={hideCart} />} */}
-        {/* <Header onShowCart={showCart} /> */}
+
         {/* <Meals /> */}
-        {/* <Pages /> */}
       </BrowserRouter>
     </CartProvider>
   );

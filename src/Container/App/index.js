@@ -5,17 +5,14 @@ import { Route, Routes, useMatch, useLocation } from "react-router-dom";
 import MainApp from "./MainApp";
 
 const App = (props) => {
-  console.log("ok");
-  console.log(window.location);
-  const match = useLocation;
-  // let match = window.location.pathname;
-  console.log("ok again");
-  console.log(match);
+  const location = useLocation();
+  console.log(location);
+  console.log(props);
 
   return (
     <Routes>
       {/* <Route exact path="/signin" element={SignIn} /> */}
-      <Route path={`${match.url}`} element={<MainApp />} />
+      <Route path="*" element={<MainApp {...props} location={location} />} />
     </Routes>
   );
 };

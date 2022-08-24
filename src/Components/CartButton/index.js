@@ -29,7 +29,7 @@ const HeaderCartButton = (props) => {
     };
   }, [items]);
   return (
-    <button className={btnClasses} onClick={props.onShowCart}>
+    <button className={btnClasses} onClick={props.toggleModalHandler}>
       <span className={styles.icon}>
         <CartIcon />
       </span>

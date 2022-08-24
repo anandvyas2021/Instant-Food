@@ -1,17 +1,25 @@
-.header {
+.header-main-container {
   position: fixed;
   top: 0;
   left: 0;
-  width: 80%;
-  height: 5rem;
+  right: 0;
+  height: 80px;
+  background-color: #7f2c0c;
+  padding: 0 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+}
+.header {
+  box-sizing: border-box;
+  max-width: 1200px;
+  min-width: 1200px;
+  height: 80px;
   background-color: #7f2c0c;
   color: white;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 10%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  z-index: 10;
+  margin: 0 auto;
+  justify-content: space-between;
 }
 
 .logo-section {
@@ -32,15 +40,20 @@
   font: inherit;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 100%;
+}
+
+.header-right-section-items {
+  display: flex;
+  flex-direction: row-reverse;
+  flex: 1;
+  height: 100%;
+  align-items: center;
 }
 
 .nav-list {
   box-sizing: inherit;
   display: flex;
-  flex: 1;
-  flex-direction: row;
   align-items: center;
   list-style-type: none;
   height: 100%;
@@ -52,7 +65,7 @@
 
 .nav-list li {
   height: 100%;
-  margin-right: 30px;
+  margin-right: 50px;
   align-items: center;
   /* background-color: chartreuse; */
 }
@@ -80,18 +93,4 @@
 .nav-links img {
   width: 20px;
   height: 20px;
-}
-
-.main-image-section {
-  width: 100%;
-  height: 25rem;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.main-image-section img {
-  width: 110%;
-  height: 100%;
-  object-fit: cover;
-  transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
 }
