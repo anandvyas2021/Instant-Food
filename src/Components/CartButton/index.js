@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 
-import CartIcon from "Cart/CartIcon";
+import CartIcon from "cart/CartIcon";
 import styles from "./styles.module.css";
 import CartContext from "store/cart-context";
 
@@ -29,7 +29,7 @@ const HeaderCartButton = (props) => {
     };
   }, [items]);
   return (
-    <button className={btnClasses} onClick={props.onShowCart}>
+    <button className={btnClasses} onClick={props.toggleModalHandler}>
       <span className={styles.icon}>
         <CartIcon />
       </span>

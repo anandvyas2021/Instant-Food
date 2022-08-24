@@ -1,7 +1,7 @@
-import { useRef, useState } from 'react';
-import styles from './Checkout.module.css';
+import { useRef, useState } from "react";
+import styles from "./Checkout.module.css";
 
-const emptyInput = (value) => value.trim() === '';
+const emptyInput = (value) => value.trim() === "";
 
 const validPostal = (value) => value.length === 5;
 
@@ -56,16 +56,16 @@ const Checkout = (props) => {
     });
   };
   const nameControlClasses = `${styles.control} ${
-    formInputValidity.name ? '' : styles.invalid
+    formInputValidity.name ? "" : styles.invalid
   }`;
   const streetControlClasses = `${styles.control} ${
-    formInputValidity.street ? '' : styles.invalid
+    formInputValidity.street ? "" : styles.invalid
   }`;
   const postalCodeControlClasses = `${styles.control} ${
-    formInputValidity.postalCode ? '' : styles.invalid
+    formInputValidity.postalCode ? "" : styles.invalid
   }`;
   const cityControlClasses = `${styles.control} ${
-    formInputValidity.city ? '' : styles.invalid
+    formInputValidity.city ? "" : styles.invalid
   }`;
 
   return (
@@ -93,7 +93,7 @@ const Checkout = (props) => {
         {!formInputValidity.city && <p>Please enter a valid city!</p>}
       </div>
       <div className={styles.actions}>
-        <button onClick={props.onHideCart}>Cancel</button>
+        <button onClick={props.toggleModalHandler}>Cancel</button>
         <button className={styles.submit}>Confirm</button>
       </div>
     </form>
