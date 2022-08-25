@@ -1,24 +1,24 @@
 .slick-arrow {
-    /* height: 60px;
+  /* height: 60px;
     width: 60px; */
 }
 .slick-prev {
-    height: 70px;
-    width: 70px;
+  height: 70px;
+  width: 70px;
 }
 
 .carousel-images-box {
-    /* width: 260px;
+  /* width: 260px;
     height: 260px; */
 }
 .carousel-image {
-    width: 260px;
-    height: 260px;
-    background-size: cover;
+  width: 260px;
+  height: 260px;
+  background-size: cover;
 }
 
 .slick-track {
-    /* gap: 20px; */
+  /* gap: 20px; */
 }
 .slick-slide {
 }
