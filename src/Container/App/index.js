@@ -5,16 +5,19 @@ import { Route, Routes, useMatch, useLocation } from "react-router-dom";
 import MainApp from "./MainApp";
 
 const App = (props) => {
-  const location = useLocation();
-  console.log(location);
-  console.log(props);
+    const location = useLocation();
+    console.log(location);
+    console.log(props);
 
-  return (
-    <Routes>
-      {/* <Route exact path="/signin" element={SignIn} /> */}
-      <Route path="*" element={<MainApp {...props} location={location} />} />
-    </Routes>
-  );
+    return (
+        <Routes>
+            {/* <Route exact path="/signin" element={SignIn} /> */}
+            <Route
+                path="*"
+                element={<MainApp {...props} location={location} />}
+            />
+        </Routes>
+    );
 };
 
 export default memo(App);

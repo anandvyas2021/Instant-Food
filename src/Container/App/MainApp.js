@@ -12,45 +12,45 @@ import App from "routes/index";
 const { Content, Footer } = Layout;
 
 const MainApp = (props) => {
-  const [modal, setModal] = useState(false);
-  const { match } = props;
+    const [modal, setModal] = useState(false);
+    const { match } = props;
 
-  // const loading = false;
+    // const loading = false;
 
-  console.log(props);
-  console.log(match);
+    console.log(props);
+    console.log(match);
 
-  const toggleModalHandler = () => {
-    setModal(!modal);
-  };
+    const toggleModalHandler = () => {
+        setModal(!modal);
+    };
 
-  return (
-    <Layout className="gx-app-layout">
-      <Layout>
-        <Header toggleModalHandler={toggleModalHandler} />
-        {modal && <Cart toggleModalHandler={toggleModalHandler} />}
+    return (
+        <Layout className="gx-app-layout">
+            <Layout>
+                <Header toggleModalHandler={toggleModalHandler} />
+                {modal && <Cart toggleModalHandler={toggleModalHandler} />}
 
-        <Content className="gx-layout-content">
-          {/* {loading && (
+                <Content className="gx-layout-content">
+                    {/* {loading && (
             <div className="gx-loader-view">
               <CircularProgress />
             </div>
           )} */}
-          <App {...props} />
-        </Content>
-        <Footer
-          style={{
-            // position: "fixed",
-            // bottom: 0,
-            // width: "100%",
-            zIndex: 1,
-          }}
-        >
-          {/* <div className="gx-layout-footer-content">{footerText}</div> */}
-        </Footer>
-      </Layout>
-    </Layout>
-  );
+                    <App {...props} />
+                </Content>
+                <Footer
+                    style={{
+                        // position: "fixed",
+                        // bottom: 0,
+                        // width: "100%",
+                        zIndex: 1,
+                    }}
+                >
+                    {/* <div className="gx-layout-footer-content">{footerText}</div> */}
+                </Footer>
+            </Layout>
+        </Layout>
+    );
 };
 
 export default MainApp;
