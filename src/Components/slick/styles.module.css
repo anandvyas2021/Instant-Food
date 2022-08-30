@@ -1,0 +1,19 @@
+.slick-prev::before {
+  font-size: 50px;
+}
+
+.carousel-images-box {
+  width: 220px;
+  height: 220px;
+}
+.carousel-image {
+  background-size: cover;
+  width: 100%;
+  /* height: 100%; */
+}
+
+.slick-track {
+  /* gap: 20px; */
+}
+.slick-slide {
+}
