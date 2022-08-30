@@ -2,10 +2,9 @@ import React from "react";
 import styles from "./styles.module.css";
 import MealsImg from "assets/meals.jpg";
 
-import MealsSummary from "components/meals/Meals";
-// import Carousel from "components/slick";
-import Carousel from "components/carousel";
-import Slick from "components/slick";
+const MealsSummary = React.lazy(() => import("components/Meals/MealsSummary"));
+const Carousel = React.lazy(() => import("components/Carousel"));
+const FilterDrawer = React.lazy(() => import("components/FilterDrawer"));
 
 export default function Home() {
   return (
@@ -16,9 +15,13 @@ export default function Home() {
 
       <MealsSummary />
       <div className={styles["home-carousel-container"]}>
-        {/* <Carousel /> */}
-        <Slick />
-        <div className={styles["home-carousel"]}></div>
+        <Carousel />
+      </div>
+      {/* <div className={styles['']}></div> */}
+      {/* <FilterDrawer /> */}
+
+      <div className={styles["home-filter-bar-container"]}>
+        <div className={styles["home-filter-bar"]}></div>
       </div>
     </React.Fragment>
   );

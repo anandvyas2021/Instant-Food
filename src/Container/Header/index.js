@@ -17,7 +17,7 @@ const Header = (props) => {
 
         <div className={styles["header-right-section"]}>
           <div className={styles["header-right-section-items"]}>
-            <HeaderCartButton toggleModalHandler={props.toggleModalHandler} />
+            <HeaderCartButton toggleCartModal={props.toggleCartModal} />
             <ul className={styles["nav-list"]}>
               {navList.map((item) => (
                 <li key={item._id}>
