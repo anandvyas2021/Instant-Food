@@ -12,45 +12,45 @@ import App from "routes/index";
 const { Content, Footer } = Layout;
 
 const MainApp = (props) => {
-    const [state, setState] = useState({ modal: false });
-    const { match } = props;
+  const [state, setState] = useState({ modal: false });
+  const { match } = props;
 
-    // const loading = false;
+  // const loading = false;
 
-    console.log(props);
-    console.log(match);
+  console.log(props);
+  console.log(match);
 
-    const toggleCartModal = () => {
-        setState({ modal: !state.modal });
-    };
+  const toggleCartModal = () => {
+    setState({ modal: !state.modal });
+  };
 
-    return (
-        <Layout className="gx-app-layout">
-            <Layout>
-                <Header toggleCartModal={toggleCartModal} />
-                {state.modal && <Cart toggleCartModal={toggleCartModal} />}
+  return (
+    <Layout className="gx-app-layout">
+      <Layout>
+        <Header toggleCartModal={toggleCartModal} />
+        {state.modal && <Cart toggleCartModal={toggleCartModal} />}
 
-                <Content className="gx-layout-content">
-                    {/* {loading && (
+        <Content className="gx-layout-content">
+          {/* {loading && (
             <div className="gx-loader-view">
               <CircularProgress />
             </div>
           )} */}
-                    <App {...props} />
-                </Content>
-                <Footer
-                    style={{
-                        // position: "fixed",
-                        // bottom: 0,
-                        // width: "100%",
-                        zIndex: 1,
-                    }}
-                >
-                    {/* <div className="gx-layout-footer-content">{footerText}</div> */}
-                </Footer>
-            </Layout>
-        </Layout>
-    );
+          <App {...props} />
+        </Content>
+        <Footer
+          style={{
+            // position: "fixed",
+            // bottom: 0,
+            // width: "100%",
+            zIndex: 1,
+          }}
+        >
+          {/* <div className="gx-layout-footer-content">{footerText}</div> */}
+        </Footer>
+      </Layout>
+    </Layout>
+  );
 };
 
 export default MainApp;

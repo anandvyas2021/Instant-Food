@@ -8,18 +8,18 @@ import App from "container/App";
 // import Meals from "components/meals/Meals";
 
 export default function NextApp() {
-    return (
-        <CartProvider>
-            <BrowserRouter>
-                <Routes>
-                    <Route path="*" element={<App />} />
-                    {/* <Route path="*" element={<NoRoute />} /> */}
-                </Routes>
+  return (
+    <CartProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="*" element={<App />} />
+          {/* <Route path="*" element={<NoRoute />} /> */}
+        </Routes>
 
-                {/* <Meals /> */}
-            </BrowserRouter>
-        </CartProvider>
-    );
+        {/* <Meals /> */}
+      </BrowserRouter>
+    </CartProvider>
+  );
 }
 
 //can use ConnectedRouter instead of BrowserRouter.
