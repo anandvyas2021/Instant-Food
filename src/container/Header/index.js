@@ -1,10 +1,10 @@
 import React from "react";
+import styles from "./styles.module.css";
 import logo from "assets/restaurant.png";
 
-import HeaderCartButton from "components/cartButton";
-import { navList } from "config";
-import styles from "./styles.module.css";
 import { NavLink } from "react-router-dom";
+import HeaderCartButton from "components/HeaderCartButton";
+import { navList } from "config";
 
 const Header = (props) => {
   return (
