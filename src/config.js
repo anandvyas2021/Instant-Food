@@ -1,3 +1,4 @@
+import search from "assets/search.png";
 import offer from "assets/offer.png";
 import help from "assets/help.png";
 import user from "assets/user.png";
@@ -11,17 +12,26 @@ import slider6 from "assets/carouselImages/slider6.webp";
 import slider7 from "assets/carouselImages/slider7.webp";
 
 export const navList = [
-  { _id: "offers", label: "Offers", icon: offer, link: "/offers" },
-  { _id: "help", label: "Help", icon: help, link: "/support" },
-  { _id: "my_account", label: "Account", icon: user, link: "/my-account" },
+    { _id: "search", label: "Search", icon: search, link: "/search" },
+    { _id: "offers", label: "Offers", icon: offer, link: "/offers" },
+    { _id: "help", label: "Help", icon: help, link: "/support" },
+    { _id: "my_account", label: "Account", icon: user, link: "/my-account" },
 ];
 
 export const carouselList = [
-  { _id: "slider1", image: slider1, slug: "slider1" },
-  { _id: "slider2", image: slider2, slug: "slider2" },
-  { _id: "slider3", image: slider3, slug: "slider3" },
-  { _id: "slider4", image: slider4, slug: "slider4" },
-  { _id: "slider5", image: slider5, slug: "slider5" },
-  { _id: "slider6", image: slider6, slug: "slider6" },
-  { _id: "slider7", image: slider7, slug: "slider7" },
+    { _id: "slider1", image: slider1, slug: "slider1" },
+    { _id: "slider2", image: slider2, slug: "slider2" },
+    { _id: "slider3", image: slider3, slug: "slider3" },
+    { _id: "slider4", image: slider4, slug: "slider4" },
+    { _id: "slider5", image: slider5, slug: "slider5" },
+    { _id: "slider6", image: slider6, slug: "slider6" },
+    { _id: "slider7", image: slider7, slug: "slider7" },
+];
+
+export const filterOptions = [
+    { _id: "relevance", label: "Relevance" },
+    { _id: "delivery_time", label: "Delivery Time" },
+    { _id: "rating", label: "Rating" },
+    { _id: "cost", label: "Relevance" },
+    { _id: "relevance", label: "Relevance" },
 ];

@@ -18,3 +18,11 @@
     margin: 3rem 0;
     padding: 40px;
 }
+
+.home-filter-bar-container {
+    background-color: aqua;
+}
+
+.home-filter-bar {
+    background-color: burlywood;
+}

@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import styles from "./Cart.module.css";
-import Modal from "../components/UI/Modal";
+import CartModal from "../components/CartModal";
 import CartItems from "./CartItems";
 import CartContext from "../store/cart-context";
 import Checkout from "./Checkout";
@@ -64,7 +64,7 @@ const Cart = (props) => {
         <div className={styles.actions}>
             <button
                 className={styles["button--alt"]}
-                onClick={props.toggleModalHandler}
+                onClick={props.toggleCartModal}
             >
                 Close
             </button>
@@ -86,7 +86,7 @@ const Cart = (props) => {
             {state.isCheckOut && (
                 <Checkout
                     onConfirm={confirmSubmitOrderHandler}
-                    toggleModalHandler={props.toggleModalHandler}
+                    toggleCartModal={props.toggleCartModal}
                 />
             )}
             {!state.isCheckOut && modalActions}
@@ -101,7 +101,7 @@ const Cart = (props) => {
             <div className={styles.actions}>
                 <button
                     className={styles.button}
-                    onClick={props.toggleModalHandler}
+                    onClick={props.toggleCartModal}
                 >
                     Close
                 </button>
@@ -110,11 +110,11 @@ const Cart = (props) => {
     );
 
     return (
-        <Modal toggleModalHandler={props.toggleModalHandler}>
+        <CartModal toggleCartModal={props.toggleCartModal}>
             {!state.isSubmitting && !state.isSubmitted && cartModalContent}
             {state.isSubmitting && SubmittingForm}
             {state.isSubmitted && SubmittedForm}
-        </Modal>
+        </CartModal>
     );
 };
 export default Cart;
