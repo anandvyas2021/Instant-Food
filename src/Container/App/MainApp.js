@@ -12,7 +12,7 @@ import App from "routes/index";
 const { Content, Footer } = Layout;
 
 const MainApp = (props) => {
-    const [modal, setModal] = useState(false);
+    const [state, setState] = useState({ modal: false });
     const { match } = props;
 
     // const loading = false;
@@ -20,15 +20,15 @@ const MainApp = (props) => {
     console.log(props);
     console.log(match);
 
-    const toggleModalHandler = () => {
-        setModal(!modal);
+    const toggleCartModal = () => {
+        setState({ modal: !state.modal });
     };
 
     return (
         <Layout className="gx-app-layout">
             <Layout>
-                <Header toggleModalHandler={toggleModalHandler} />
-                {modal && <Cart toggleModalHandler={toggleModalHandler} />}
+                <Header toggleCartModal={toggleCartModal} />
+                {state.modal && <Cart toggleCartModal={toggleCartModal} />}
 
                 <Content className="gx-layout-content">
                     {/* {loading && (
