@@ -1,32 +1,32 @@
 .filter-drawer-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 200;
-    background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .filter-drawer-overlay {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 762px;
-    z-index: 1002;
-    animation: slide-down 300ms ease-out forwards;
-    background-color: whitesmoke;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 762px;
+  z-index: 1003;
+  animation: slide-down 300ms ease-out forwards;
+  background-color: whitesmoke;
 }
 
 @keyframes slide-down {
-    from {
-        opacity: 0;
-        transform: translatex(762px);
-        width: 762px;
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translatex(762px);
+    width: 762px;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
