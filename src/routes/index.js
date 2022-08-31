@@ -1,31 +1,31 @@
+import React from "react";
 import { useRoutes } from "react-router-dom";
 
-import Home from "./Home";
-import Offers from "./Offers";
-import Account from "./Account";
-import Help from "./Help";
+const Home = React.lazy(() => import("./Home"));
+const Offers = React.lazy(() => import("./Offers"));
+const Account = React.lazy(() => import("./Account"));
+const Help = React.lazy(() => import("./Help"));
 
 const App = (props) => {
-  let routes = useRoutes([
-    {
-      path: "/",
-      element: <Home />,
-    },
-    {
-      path: "/offers",
-      element: <Offers />,
-    },
-    {
-      path: "/my-account",
-      element: <Account />,
-    },
-    {
-      path: "/support",
-      element: <Help />,
-    },
-  ]);
-  console.log(props);
-  return routes;
+    let routes = useRoutes([
+        {
+            path: "/",
+            element: <Home {...props} />,
+        },
+        {
+            path: "/offers",
+            element: <Offers {...props} />,
+        },
+        {
+            path: "/my-account",
+            element: <Account {...props} />,
+        },
+        {
+            path: "/support",
+            element: <Help {...props} />,
+        },
+    ]);
+    return <React.Suspense>{routes}</React.Suspense>;
 };
 
 export default App;
