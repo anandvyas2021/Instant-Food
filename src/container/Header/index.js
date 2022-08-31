@@ -11,7 +11,10 @@ const Header = (props) => {
     <header header className={styles["header-main-container"]}>
       <div className={styles.header}>
         <div className={styles["logo-section"]}>
-          <img className={styles["logo-img"]} src={logo} alt="" />
+          <NavLink to="/">
+            <img className={styles["logo-img"]} src={logo} alt="logo" />
+          </NavLink>
+
           <h2>Instant Food</h2>
         </div>
 
@@ -24,7 +27,7 @@ const Header = (props) => {
                   <div className={styles["nav-list-item"]}>
                     <NavLink className={styles["nav-links"]} to={item.link}>
                       <span>
-                        <img src={item.icon} alt="" />
+                        <img src={item.icon} alt="icon" />
                       </span>
                       <span>{item.label}</span>
                     </NavLink>

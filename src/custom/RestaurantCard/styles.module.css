@@ -1,2 +1,72 @@
-.restaurant-card-box {
+.restro-card-box {
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.restro-card-box:hover {
+  outline: 1px solid rgb(36, 33, 33);
+}
+
+.restro-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  gap: 5px;
+  /* background-color: darkred; */
+}
+
+.restro-card-image {
+  height: 160px;
+}
+
+.restro-card-description {
+  box-sizing: border-box;
+  /* height: 50px; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  line-height: 0;
+  padding: 5px;
+  /* background-color: burlywood; */
+}
+.restro-card-description span {
+  display: flex;
+  gap: 5px;
+}
+
+.restro-card-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 5px;
+  /* background-color: darkgoldenrod; */
+}
+
+.details-rating {
+  width: 43px;
+  height: 20px;
+  padding: 0 5px;
+  /* background-color: #48c479; */
+}
+
+.details-rating-star::before {
+  content: "\E938";
+}
+
+.restro-card-offers {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #8a584b;
+  line-height: 0;
+  padding: 5px;
+  border-top: 2px solid #e9e9eb;
+  /* background-color: darkseagreen; */
+}
+
+.restro-card-offers img {
+  width: 20px;
 }

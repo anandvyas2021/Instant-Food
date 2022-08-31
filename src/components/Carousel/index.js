@@ -14,7 +14,11 @@ export default function Carousel() {
             key={item._id}
             className={styles["carousel-image-box"]}
           >
-            <img src={item.image} className={styles["carousel-image"]} />
+            <img
+              src={item.image}
+              alt="carousel"
+              className={styles["carousel-image"]}
+            />
           </Link>
         ))}
         <div className={styles["carousel-prev-btn carousel-btn"]}>&#8249;</div>
