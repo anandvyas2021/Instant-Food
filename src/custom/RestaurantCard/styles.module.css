@@ -1,10 +1,14 @@
 .restro-card-box {
   box-sizing: border-box;
+  cursor: pointer;
+  border: 2px solid #fff;
   background-color: white;
 }
 
 .restro-card-box:hover {
-  outline: 1px solid rgb(36, 33, 33);
+  border-color: #d3d5df;
+  box-shadow: 0 4px 7px 0 rgb(218 220 230 / 60%);
+  /* outline: 1px solid #d3d5df; */
 }
 
 .restro-card {
@@ -36,6 +40,15 @@
   gap: 5px;
 }
 
+.restro-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  color: "#686b78";
+  font-size: 13px;
+  gap: 5px;
+  /* justify-content: space-around; */
+}
+
 .restro-card-details {
   display: flex;
   align-items: center;
@@ -46,14 +59,20 @@
 }
 
 .details-rating {
+  display: flex;
+  align-items: center;
+  line-height: 0;
   width: 43px;
   height: 20px;
   padding: 0 5px;
+  gap: 3px;
+  color: #fff;
   /* background-color: #48c479; */
 }
 
-.details-rating-star::before {
-  content: "\E938";
+.details-rating-star {
+  width: 12px;
+  height: 12px;
 }
 
 .restro-card-offers {
@@ -62,11 +81,24 @@
   gap: 7px;
   color: #8a584b;
   line-height: 0;
-  padding: 5px;
+  padding-top: 14px;
   border-top: 2px solid #e9e9eb;
   /* background-color: darkseagreen; */
 }
 
 .restro-card-offers img {
   width: 20px;
+  font-weight: 400;
+}
+
+.restro-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5d8ed5;
+  font-weight: 600;
+  padding: 4px 0 0 0;
+  margin-top: 7px;
+  border-top: 1px solid #e9e9eb;
+  /* background-color: darkgoldenrod; */
 }
