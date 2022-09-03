@@ -1,44 +1,56 @@
 import React, { useEffect, useState } from "react";
-import { Layout } from "antd";
 import styles from "./styles.module.css";
+import { Layout } from "antd";
 
 import Header from "container/Header";
 import Cart from "cart/Cart";
 
-// import Topbar from "../Topbar/index";
 // import { footerText } from "util/config";
 
 import App from "routes/index";
 
+const AddressDrawer = React.lazy(() => import("components/AddressDrawer"));
 const FilterDrawer = React.lazy(() => import("components/FilterDrawer"));
-
 const { Content, Footer } = Layout;
 
 const MainApp = (props) => {
-  const [state, setState] = useState({ modal: false, filterDrawer: false });
+  const [state, setState] = useState({
+    addressDrawer: false,
+    modal: false,
+    filterDrawer: false,
+  });
   const { match } = props;
-
-  // const loading = false;
 
   console.log(props);
   console.log(match);
 
+  const toggleAddressDrawer = () => {
+    setState({ addressDrawer: !state.addressDrawer });
+  };
   const toggleCartModal = () => {
     setState({ modal: !state.modal });
   };
   const toggleFilterDrawer = () => {
     setState({ filterDrawer: !state.filterDrawer });
   };
+
   useEffect(() => {
     const bodyTag = document.getElementsByTagName("body").item(0);
     state.filterDrawer
       ? bodyTag.classList.add(styles["bodyHidden"])
       : bodyTag.classList.remove(styles["bodyHidden"]);
-  }, [state.filterDrawer]);
+  }, [state.filterDrawer, state.addressDrawer]);
+
   return (
     <Layout className="gx-app-layout">
       <Layout>
-        <Header toggleCartModal={toggleCartModal} />
+        <Header
+          toggleAddressDrawer={toggleAddressDrawer}
+          toggleCartModal={toggleCartModal}
+        />
+        {state.addressDrawer && (
+          <AddressDrawer toggleAddressDrawer={toggleAddressDrawer} />
+        )}
         {state.modal && <Cart toggleCartModal={toggleCartModal} />}
 
         <Content className="gx-layout-content">
@@ -47,7 +59,7 @@ const MainApp = (props) => {
               <CircularProgress />
             </div>
           )} */}
-          <App {...props} toggleFilterDrawer={toggleFilterDrawer} />
+          {/* <App {...props} toggleFilterDrawer={toggleFilterDrawer} /> */}
           {state.filterDrawer && (
             <React.Suspense>
               <FilterDrawer toggleFilterDrawer={toggleFilterDrawer} />

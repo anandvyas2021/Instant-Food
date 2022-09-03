@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useRef, useState, useEffect, useCallback } from "react";
 import styles from "./styles.module.css";
 import MealsImg from "assets/meals.jpg";
 import FilterImg from "assets/filter.png";
+import search from "assets/NavIcons/search.png";
 
+import { NavLink } from "react-router-dom";
 import { filterOptions, restaurantData } from "config";
 import RestaurantCard from "custom/RestaurantCard";
 
@@ -10,6 +12,27 @@ const MealsSummary = React.lazy(() => import("components/Meals/MealsSummary"));
 const Carousel = React.lazy(() => import("components/Carousel"));
 
 export default function Home(props) {
+  const [state, setState] = useState({ filterStuck: false });
+
+  const ref = useRef(null);
+  const handleScroll = useCallback(() => {
+    console.log(window.scrollY);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", (e) => {
+      // console.log(window.scrollY, ref.current);
+
+      if (window.scrollY > 1100) {
+        ref.current.classList.add(styles["scrollStyles"]);
+        setState({ filterStuck: true });
+      } else {
+        // ref.current.classList.remove(styles["scrollStyles"]);
+        setState({ filterStuck: false });
+      }
+    });
+  }, []);
+
   const decorateListItems = (className) => {
     const allListItems = document.querySelectorAll(".item");
     const listItem = document.querySelector(`.${className}`);
@@ -23,15 +46,6 @@ export default function Home(props) {
     listItem.classList.add(styles.custom);
   };
 
-  // useEffect(() => {
-  //   let ele = document.querySelector(".home-filter-bar-container");
-  //  window.onscroll=()=>{if(document.body.scrollTop>=200){
-  //   ele.classList.add
-  //  }}
-
-  //   return () => {};
-  // }, []);
-
   return (
     <React.Fragment>
       <div className={styles["main-image-section"]}>
@@ -42,16 +56,30 @@ export default function Home(props) {
         <div className={styles["home-carousel-container"]}>
           <Carousel />
         </div>
-        {/* <div className={styles['']}></div> */}
-        {/* <FilterDrawer /> */}
 
-        <div className={styles["home-filter-bar-container"]}>
+        <div
+          className={styles["home-filter-bar-container"]}
+          ref={ref}
+          onScroll={handleScroll}
+        >
           <div className={styles["home-filter-bar"]}>
             <div className={styles["home-filter-heading"]}>
               {"100 Restaurants"}
             </div>
             <div className={styles["home-filter-options"]}>
               <ul className="allListItems">
+                {state.filterStuck && (
+                  <li>
+                    <div className="nav-list-item">
+                      <NavLink className={styles["nav-links"]} to={"/search"}>
+                        <span>
+                          <img src={search} alt="icon" />
+                        </span>
+                        <span style={{ fontSize: "18px" }}>{"Search"}</span>
+                      </NavLink>
+                    </div>
+                  </li>
+                )}
                 {filterOptions.map((option) => (
                   <li
                     key={option._id}
@@ -76,8 +104,8 @@ export default function Home(props) {
         </div>
 
         <div className={styles["home-restaurant-list-container"]}>
-          {restaurantData.map((data) => (
-            <RestaurantCard data={data} />
+          {restaurantData.map((data, i) => (
+            <RestaurantCard key={i} data={data} />
           ))}
         </div>
       </div>
