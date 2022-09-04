@@ -4,13 +4,15 @@ import { Layout } from "antd";
 
 import Header from "container/Header";
 import Cart from "cart/Cart";
+import AddressDrawer from "components/AddressDrawer";
 
 // import { footerText } from "util/config";
 
 import App from "routes/index";
 
-const AddressDrawer = React.lazy(() => import("components/AddressDrawer"));
+// const AddressDrawer = React.lazy(() => import("components/AddressDrawer"));
 const FilterDrawer = React.lazy(() => import("components/FilterDrawer"));
+
 const { Content, Footer } = Layout;
 
 const MainApp = (props) => {
@@ -21,15 +23,20 @@ const MainApp = (props) => {
   });
   const { match } = props;
 
-  console.log(props);
-  console.log(match);
+  // console.log(props);
+  // console.log(match);
 
+  //address drawer handlers
   const toggleAddressDrawer = () => {
     setState({ addressDrawer: !state.addressDrawer });
   };
+
+  //cart modal handlers
   const toggleCartModal = () => {
     setState({ modal: !state.modal });
   };
+
+  //filter drawer handlers
   const toggleFilterDrawer = () => {
     setState({ filterDrawer: !state.filterDrawer });
   };
