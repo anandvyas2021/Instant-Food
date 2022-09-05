@@ -3,6 +3,9 @@ import offer from "assets/NavIcons/offer.png";
 import help from "assets/NavIcons/help.png";
 import user from "assets/NavIcons/user.png";
 
+import home from "assets/AddressDrawer/home.png";
+import work from "assets/AddressDrawer/work.png";
+
 import slider1 from "assets/CarouselSliders/slider1.webp";
 import slider2 from "assets/CarouselSliders/slider2.webp";
 import slider3 from "assets/CarouselSliders/slider3.webp";
@@ -16,6 +19,23 @@ export const navList = [
   { _id: "offers", label: "Offers", icon: offer, link: "/offers" },
   { _id: "help", label: "Help", icon: help, link: "/support" },
   { _id: "my_account", label: "Account", icon: user, link: "/my-account" },
+];
+
+export const savedAddresses = [
+  {
+    _id: 0,
+    icon: home,
+    type: "Home",
+    address:
+      "Room No. 302, Sunrise PG for gents, Bengaluru, Karnataka 560035, India",
+  },
+  {
+    _id: 1,
+    icon: work,
+    type: "Work",
+    address:
+      "401,4th floor, 4th floor, SAKET CALLIPOLIS, Marathahalli - Sarjapur Rd, near Wipro, Rainbow Drive, Bengaluru, Karnataka 560035, India",
+  },
 ];
 
 export const carouselList = [

@@ -9,10 +9,11 @@
 }
 
 .address-drawer-overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
+    overflow-y: auto;
     width: 580px;
     z-index: 1003;
     font-family: ProximaNova, arial, Helvetica Neue, sans-serif;
@@ -20,6 +21,8 @@
     background-color: whitesmoke;
 
     .address-drawer {
+
+        box-sizing: border-box;
         display: flex;
         margin-left: 150px;
         margin-right: 50px;
@@ -28,6 +31,7 @@
         // background-color: rgb(201, 201, 32);
 
         .address-drawer-upper-section {
+            box-sizing: border-box;
             // background-color: chocolate;
 
             .address-drawer-close {
@@ -36,6 +40,7 @@
                 // background-color: darkorchid;
 
                 .address-drawer-close-img-box {
+                    cursor: pointer;
                     width: 15px;
                     height: 15px;
                     // background-color: aquamarine;
@@ -78,20 +83,134 @@
         }
 
         .address-drawer-lower-section {
-            height: 50px;
-            background-color: dimgray;
+            box-sizing: border-box;
+            // padding: 22px 24px;
+            // background-color: dimgray;
 
-            .address-drawer-gps {
-                img {
-                    height: 100%;
+            .address-drawer-gps-container {
+                display: grid;
+                grid-template-columns: 0.2fr 1fr;
+                margin-bottom: 1.5rem;
+                border: 1px solid #d4d5d9;
+                cursor: pointer;
+                // background-color: #57d8e758;
+
+                &:hover {
+                    .address-drawer-gps-heading {
+                        color: #fc8019;
+                        transition: 0.2s;
+                    }
+                }
+
+                .address-drawer-gps-icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
                     width: 100%;
+                    height: 100%;
+                    // background-color: aliceblue;
+
+                    .gps-icon {
+                        width: 20px;
+                        height: 20px;
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .address-drawer-gps-text {
+                    padding: 15px 10px;
+                    // background-color: darkgrey;
+
+                    .address-drawer-gps-heading {
+                        font-size: 17px;
+                        font-weight: 550;
+                    }
+
+                    .address-drawer-gps-para {
+                        font-size: 14px;
+                        color: #939d9f;
+                        padding-top: 5px;
+                    }
                 }
             }
 
-            .address-drawer-saved-address {}
+            .address-drawer-saved-address-container {
+                border: 1px solid #d4d5d9;
+                box-sizing: border-box;
+                // background-color: aqua;
+
+                p {
+                    font-size: 12px;
+                    color: #7e808c;
+                    box-sizing: border-box;
+                    padding: 0px 55px;
+                    // background-color: lightseagreen;
+                }
+
+                .address-drawer-saved-addresses {
+                    .address-drawer-saved-address {
+                        display: grid;
+                        grid-template-columns: 0.2fr 1fr;
+                        margin-bottom: 1rem;
+                        cursor: pointer;
+                        // background-color: indigo;
+
+                        &:hover {
+                            .address-drawer-saved-address-type {
+                                color: #fc8019;
+                                transition: 0.2s;
+                            }
+                        }
+
+                        .address-drawer-saved-address-icon {
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            width: 100%;
+                            height: 100%;
+                            // background-color: burlywood;
+
+                            .saved-address-icon {
+                                width: 20px;
+                                height: 20px;
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
+
+                        .address-drawer-saved-address-text {
+                            padding: 15px 10px;
+                            // background-color: khaki;
+
+                            .address-drawer-saved-address-type {
+                                font-size: 17px;
+                                font-weight: 550;
+                                // background-color: rgb(11, 141, 141);
+                            }
+
+                            .address-drawer-saved-address-main {
+                                font-size: 14px;
+                                color: #939d9f;
+                                padding-top: 5px;
+                                // background-color: deepskyblue;
+                            }
+
+                            &:nth-child(n+2) {
+                                border-bottom: 1px dashed #a9abb2;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
-
 }
 
 @keyframes slide-down {
@@ -103,6 +222,6 @@
 
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(0px);
     }
 }

@@ -66,7 +66,7 @@ const MainApp = (props) => {
               <CircularProgress />
             </div>
           )} */}
-          {/* <App {...props} toggleFilterDrawer={toggleFilterDrawer} /> */}
+          <App {...props} toggleFilterDrawer={toggleFilterDrawer} />
           {state.filterDrawer && (
             <React.Suspense>
               <FilterDrawer toggleFilterDrawer={toggleFilterDrawer} />
