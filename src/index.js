@@ -1,5 +1,6 @@
 import React from "react";
 import * as ReactDOMClient from "react-dom/client";
+// import "antd/dist/antd.css";
 import "./index.css";
 
 import NextApp from "./NextApp";

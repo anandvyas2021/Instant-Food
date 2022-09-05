@@ -1,4 +1,5 @@
 .restro-card-box {
+  /* position: relative; */
   box-sizing: border-box;
   cursor: pointer;
   border: 2px solid #fff;
@@ -20,6 +21,42 @@
   /* background-color: darkred; */
 }
 
+.restro-card-ribbon-wrapper {
+  position: relative;
+  background-color: #1890ff;
+}
+
+.restro-card-ribbon {
+  font-size: 15px;
+  font-weight: 540;
+  padding: 5px 9px 4px;
+  color: white;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.restro-card-ribbon-corner {
+  position: absolute;
+  top: 100%;
+  width: 8px;
+  height: 8px;
+  color: currentcolor;
+  border: 4px solid;
+  transform: scaleX(0.75);
+  transform-origin: top;
+}
+.restro-card-ribbon-corner::after {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: inherit;
+  height: inherit;
+  color: rgba(0, 0, 0, 0.25);
+  border: inherit;
+  content: "";
+}
+
 .restro-card-image {
   height: 160px;
 }
@@ -32,13 +69,14 @@
   align-items: flex-start;
   justify-content: center;
   line-height: 0;
-  padding: 5px;
+  padding: 10px 5px;
+  gap: 15px;
   /* background-color: burlywood; */
 }
-.restro-card-description span {
+/* .restro-card-description span {
   display: flex;
   gap: 5px;
-}
+} */
 
 .restro-card-tags {
   display: flex;
@@ -101,4 +139,51 @@
   margin-top: 7px;
   border-top: 1px solid #e9e9eb;
   /* background-color: darkgoldenrod; */
+}
+
+.ant-ribbon-wrapper {
+  position: relative;
+}
+.ant-ribbon {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  list-style: none;
+  font-feature-settings: "tnum";
+  position: absolute;
+  top: 8px;
+  height: 22px;
+  padding: 0 8px;
+  color: #fff;
+  line-height: 22px;
+  white-space: nowrap;
+  background-color: #1890ff;
+  border-radius: 2px;
+}
+.ant-ribbon-text {
+  color: #fff;
+}
+.ant-ribbon-corner {
+  position: absolute;
+  top: 100%;
+  width: 8px;
+  height: 8px;
+  color: currentcolor;
+  border: 4px solid;
+  transform: scaleY(0.75);
+  transform-origin: top;
+}
+.ant-ribbon-corner::after {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: inherit;
+  height: inherit;
+  color: rgba(0, 0, 0, 0.25);
+  border: inherit;
+  content: "";
 }

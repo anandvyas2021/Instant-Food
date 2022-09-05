@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 
 import CartIcon from "cart/CartIcon";
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 import CartContext from "store/cart-context";
 
 const HeaderCartButton = (props) => {
@@ -33,8 +33,8 @@ const HeaderCartButton = (props) => {
       <span className={styles.icon}>
         <CartIcon />
       </span>
-      <span>Your Cart</span>
-      <span className={styles.badge}>{numberOfCartItems}</span>
+      <span className={styles["header-cart-label"]} />
+      <span className={styles["header-cart-badge"]}>{numberOfCartItems}</span>
     </button>
   );
 };

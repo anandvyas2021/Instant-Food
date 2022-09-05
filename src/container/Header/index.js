@@ -1,6 +1,7 @@
 import React from "react";
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 import logo from "assets/restaurant.png";
+import downArrow from "assets/down.png";
 
 import { NavLink } from "react-router-dom";
 import HeaderCartButton from "components/HeaderCartButton";
@@ -16,6 +17,19 @@ const Header = (props) => {
           </NavLink>
 
           <h2>Instant Food</h2>
+        </div>
+
+        <div
+          className={styles["header-address-section"]}
+          onClick={props.toggleAddressDrawer}
+        >
+          <span className={styles["header-address-type"]}>{"Home"}</span>
+          <span className={styles["header-address"]}>
+            {"Bengaluru, Karnataka 560035, India"}
+          </span>
+          <span className={styles["header-address-arrow"]}>
+            <img src={downArrow} alt="down" />
+          </span>
         </div>
 
         <div className={styles["header-right-section"]}>

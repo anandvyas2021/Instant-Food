@@ -28,9 +28,17 @@ export default function RestaurantCard(props) {
   const { data } = props;
   return (
     <div className={styles["restro-card-box"]}>
-      {/* <span className={styles["restro-card-ribbon"]} style={data.ribbon_styles}>
-        {data.ribbon}
-      </span> */}
+      <div className={styles["restro-card-ribbon-wrapper"]}>
+        <span
+          className={styles["restro-card-ribbon"]}
+          style={data.ribbon_styles}
+        >
+          {data.ribbon}
+        </span>
+        <span className={styles["restro-card-ribbon-corner"]} />
+      </div>
+
+      {/* <Badge.Ribbon text={data.ribbon} style={data.ribbon_styles} /> */}
       <div
         className={styles["restro-card"]}
         onMouseOver={() => mouseOverCard()}
@@ -50,8 +58,17 @@ export default function RestaurantCard(props) {
             {data.name}
           </h4>
           <div className={styles["restro-card-tags"]}>
-            {data.tags.map((tag) => {
-              return <Tag color="red">{tag}</Tag>;
+            {data.tags.map((tag, i) => {
+              return (
+                <Tag
+                  key={i}
+                  color={`#${Math.floor(Math.random() * 16777215).toString(
+                    16
+                  )}`}
+                >
+                  {tag}
+                </Tag>
+              );
             })}
           </div>
         </div>

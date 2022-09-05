@@ -1,0 +1,103 @@
+.address-drawer-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1003;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.address-drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 580px;
+    z-index: 1003;
+    font-family: ProximaNova, arial, Helvetica Neue, sans-serif;
+    animation: slide-down 300ms ease-out forwards;
+    background-color: whitesmoke;
+
+    .address-drawer {
+        display: flex;
+        margin-left: 150px;
+        margin-right: 50px;
+        height: 100%;
+        flex-direction: column;
+        // background-color: rgb(201, 201, 32);
+
+        .address-drawer-upper-section {
+            // background-color: chocolate;
+
+            .address-drawer-close {
+                box-sizing: border-box;
+                padding: 2rem 0;
+                // background-color: darkorchid;
+
+                .address-drawer-close-img-box {
+                    width: 15px;
+                    height: 15px;
+                    // background-color: aquamarine;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .address-drawer-search {
+                position: relative;
+                box-sizing: border-box;
+                padding: 1rem 0;
+                // background-color: darkkhaki;
+
+                input {
+                    box-sizing: border-box;
+                    width: 100%;
+                    border: 0.8px solid rgb(167, 141, 141);
+                    padding: 0.9rem !important;
+                    outline: none;
+                    font-size: medium;
+
+                    &:focus {
+                        box-shadow: 0 1px 7px 1px #d4d5d9;
+                    }
+                }
+
+                .address-drawer-search-clear {
+                    position: absolute;
+                    top: 33px;
+                    right: 13px;
+                    cursor: pointer;
+                    font-weight: 500;
+                    color: #fc8019;
+                }
+            }
+        }
+
+        .address-drawer-lower-section {
+            height: 50px;
+            background-color: dimgray;
+
+            .address-drawer-gps {}
+
+            .address-drawer-saved-address {}
+        }
+    }
+
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translatex(0px);
+        width: 0px;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
