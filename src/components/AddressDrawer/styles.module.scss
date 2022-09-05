@@ -81,7 +81,12 @@
             height: 50px;
             background-color: dimgray;
 
-            .address-drawer-gps {}
+            .address-drawer-gps {
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
 
             .address-drawer-saved-address {}
         }
