@@ -1,6 +1,6 @@
 import React from "react";
-import "./styles.module.css";
+import "./styles.module.scss";
 
 export default function Help() {
-  return <div>Support</div>;
+    return <div>Support</div>;
 }

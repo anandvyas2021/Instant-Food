@@ -25,7 +25,7 @@ const App = (props) => {
             element: <Help {...props} />,
         },
     ]);
-    return <React.Suspense>{routes}</React.Suspense>;
+    return <React.Suspense fallback={<p>Loading</p>}>{routes}</React.Suspense>;
 };
 
 export default App;
