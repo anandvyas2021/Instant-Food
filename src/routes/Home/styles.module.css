@@ -45,6 +45,11 @@
   /* width: 100vw; */
 }
 
+.normalNav {
+  background-color: white;
+  color: #3e3f48;
+}
+
 .home-filter-bar {
   box-sizing: border-box;
   display: flex;

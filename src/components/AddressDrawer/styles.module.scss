@@ -9,11 +9,11 @@
 }
 
 .address-drawer-overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
-    overflow-y: auto;
+    // overflow-y: auto;
     width: 580px;
     z-index: 1003;
     font-family: ProximaNova, arial, Helvetica Neue, sans-serif;
@@ -21,17 +21,23 @@
     background-color: whitesmoke;
 
     .address-drawer {
-
         box-sizing: border-box;
         display: flex;
-        margin-left: 150px;
-        margin-right: 50px;
-        height: 100%;
         flex-direction: column;
+        padding-left: 150px;
+        // padding-right: 50px;
+        height: 100%;
         // background-color: rgb(201, 201, 32);
 
         .address-drawer-upper-section {
             box-sizing: border-box;
+            padding-right: 50px;
+            background-color: whitesmoke;
+            // position: fixed;
+            // display: flex;
+            // flex-direction: column;
+            top: 0;
+            // right: 0;
             // background-color: chocolate;
 
             .address-drawer-close {
@@ -53,8 +59,8 @@
             }
 
             .address-drawer-search {
-                position: relative;
                 box-sizing: border-box;
+                position: relative;
                 padding: 1rem 0;
                 // background-color: darkkhaki;
 
@@ -84,6 +90,8 @@
 
         .address-drawer-lower-section {
             box-sizing: border-box;
+            padding-right: 50px;
+            overflow-y: auto;
             // padding: 22px 24px;
             // background-color: dimgray;
 

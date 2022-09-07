@@ -26,10 +26,14 @@ export default function Home(props) {
       if (window.scrollY > 1100) {
         ref.current.classList.add(styles["scrollStyles"]);
         setState({ filterStuck: true });
-      } else {
-        // ref.current.classList.remove(styles["scrollStyles"]);
+      }
+      console.log(state.filterStuck);
+      if (state.filterStuck) {
+        ref.current.classList.add(styles["normalNav"]);
         setState({ filterStuck: false });
       }
+      // else {
+      // }
     });
   }, []);
 
@@ -64,7 +68,7 @@ export default function Home(props) {
         >
           <div className={styles["home-filter-bar"]}>
             <div className={styles["home-filter-heading"]}>
-              {"100 Restaurants"}
+              {`${restaurantData.length} Restaurants`}
             </div>
             <div className={styles["home-filter-options"]}>
               <ul className="allListItems">

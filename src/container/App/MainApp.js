@@ -43,7 +43,7 @@ const MainApp = (props) => {
 
   useEffect(() => {
     const bodyTag = document.getElementsByTagName("body").item(0);
-    state.filterDrawer
+    state.filterDrawer || state.addressDrawer
       ? bodyTag.classList.add(styles["bodyHidden"])
       : bodyTag.classList.remove(styles["bodyHidden"]);
   }, [state.filterDrawer, state.addressDrawer]);
