@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect, useCallback } from "react";
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 import MealsImg from "assets/meals.jpg";
 import FilterImg from "assets/filter.png";
 import search from "assets/NavIcons/search.png";

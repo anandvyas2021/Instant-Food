@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 import { Layout } from "antd";
 
 import Header from "container/Header";
@@ -7,7 +7,6 @@ import Cart from "cart/Cart";
 import AddressDrawer from "components/AddressDrawer";
 
 // import { footerText } from "util/config";
-
 import App from "routes/index";
 
 // const AddressDrawer = React.lazy(() => import("components/AddressDrawer"));
@@ -21,7 +20,7 @@ const MainApp = (props) => {
     modal: false,
     filterDrawer: false,
   });
-  const { match } = props;
+  // const { match } = props;
 
   // console.log(props);
   // console.log(match);
