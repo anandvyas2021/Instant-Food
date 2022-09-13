@@ -14,6 +14,13 @@ import slider5 from "assets/CarouselSliders/slider5.webp";
 import slider6 from "assets/CarouselSliders/slider6.webp";
 import slider7 from "assets/CarouselSliders/slider7.webp";
 
+import Orders from "assets/AccountsIcons/orders.png";
+import Brand from "assets/AccountsIcons/brand.png";
+import Favourites from "assets/AccountsIcons/favourites.png";
+import Payments from "assets/AccountsIcons/payments.png";
+import Addresses from "assets/AccountsIcons/addresses.png";
+import Settings from "assets/AccountsIcons/settings.png";
+
 export const navList = [
   { _id: "search", label: "Search", icon: search, link: "/search" },
   { _id: "offers", label: "Offers", icon: offer, link: "/offers" },
@@ -125,4 +132,23 @@ export const restaurantData = [
     cost: "₹300 FOR TWO",
     offer_available: false,
   },
+];
+
+export const profileMenu = [
+  { _id: "orders", icon: Orders, label: "Orders", link: "/orders" },
+  { _id: "super", icon: Brand, label: "Super", link: "/super" },
+  {
+    _id: "favourites",
+    icon: Favourites,
+    label: "Favourites",
+    link: "/favourites",
+  },
+  { _id: "payments", icon: Payments, label: "Payments", link: "/payments" },
+  {
+    _id: "manage_addresses",
+    icon: Addresses,
+    label: "Addresses",
+    link: "/manage_addresses",
+  },
+  { _id: "settings", icon: Settings, label: "Settings", link: "/settings" },
 ];

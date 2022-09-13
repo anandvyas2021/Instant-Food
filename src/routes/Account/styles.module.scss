@@ -1,0 +1,49 @@
+.account-main-container {
+    box-sizing: border-box;
+    // min-height: 100vh;
+    padding: 0 20px;
+    background-color: brown;
+
+    .account-inner-box {
+        box-sizing: border-box;
+        width: 100%;
+        min-height: 100vh;
+        // height: 100%;
+        background: #37718e;
+
+        .account-header {
+            box-sizing: border-box;
+            max-width: 1440px;
+            padding: 40px 0 0 0;
+            margin: 0px auto;
+            color: #fff;
+            background-color: cornflowerblue;
+
+            .account-header-heading {}
+
+            .account-header-details {}
+        }
+
+        .account-body {
+            max-width: 1500px;
+            margin: 0 auto;
+            box-shadow: 0 2px 15px 0rgba(0, 0, 0, .15);
+            background-color: blueviolet;
+            padding: 50px initial;
+
+            .account-body-content {
+                max-width: 1440px;
+                margin: 0 auto;
+                background-color: darkgoldenrod;
+
+                .account-body-menu {
+                    ul {
+                        list-style-type: none;
+
+                        li {}
+                    }
+                }
+            }
+        }
+    }
+}

@@ -19,23 +19,23 @@ export default function Home(props) {
     console.log(window.scrollY);
   }, []);
 
-  useEffect(() => {
-    window.addEventListener("scroll", (e) => {
-      // console.log(window.scrollY, ref.current);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", (e) => {
+  //     // console.log(window.scrollY, ref.current);
 
-      if (window.scrollY > 1100) {
-        ref.current.classList.add(styles["scrollStyles"]);
-        setState({ filterStuck: true });
-      }
-      console.log(state.filterStuck);
-      if (state.filterStuck) {
-        ref.current.classList.add(styles["normalNav"]);
-        setState({ filterStuck: false });
-      }
-      // else {
-      // }
-    });
-  }, []);
+  //     if (window.scrollY > 1100) {
+  //       ref.current.classList.add(styles["scrollStyles"]);
+  //       setState({ filterStuck: true });
+  //     }
+  //     console.log(state.filterStuck);
+  //     if (state.filterStuck) {
+  //       ref.current.classList.add(styles["normalNav"]);
+  //       setState({ filterStuck: false });
+  //     }
+  //     // else {
+  //     // }
+  //   });
+  // }, []);
 
   const decorateListItems = (className) => {
     const allListItems = document.querySelectorAll(".item");
