@@ -1,6 +1,5 @@
 .account-main-container {
     box-sizing: border-box;
-    // min-height: 100vh;
     padding: 0 20px;
     background-color: brown;
 
@@ -8,39 +7,58 @@
         box-sizing: border-box;
         width: 100%;
         min-height: 100vh;
-        // height: 100%;
         background: #37718e;
 
-        .account-header {
+        .account-header-box {
             box-sizing: border-box;
             max-width: 1440px;
             padding: 40px 0 0 0;
             margin: 0px auto;
-            color: #fff;
             background-color: cornflowerblue;
 
-            .account-header-heading {}
+            .account-header {
+                margin-top: 30px;
+                margin-bottom: 30px;
+                color: #fff;
+                background-color: hotpink;
 
-            .account-header-details {}
+                .account-header-heading {}
+
+                .account-header-details {}
+
+                .account-header-btn {
+                    // float: right
+                }
+            }
         }
 
+
         .account-body {
+            box-sizing: border-box;
             max-width: 1500px;
             margin: 0 auto;
             box-shadow: 0 2px 15px 0rgba(0, 0, 0, .15);
             background-color: blueviolet;
-            padding: 50px initial;
 
-            .account-body-content {
+            .account-body-inner {
+                box-sizing: border-box;
                 max-width: 1440px;
                 margin: 0 auto;
-                background-color: darkgoldenrod;
+                padding: 30px 0 !important;
+                background-color: antiquewhite;
 
-                .account-body-menu {
-                    ul {
-                        list-style-type: none;
+                .account-body-content {
+                    display: flex;
+                    // align-items: center;
 
-                        li {}
+                    background-color: darkgoldenrod;
+
+                    .account-body-menu {
+                        ul {
+                            list-style-type: none;
+
+                            li {}
+                        }
                     }
                 }
             }

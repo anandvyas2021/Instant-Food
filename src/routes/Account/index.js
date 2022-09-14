@@ -18,28 +18,35 @@ export default function Account() {
   return (
     <div className={styles["account-main-container"]}>
       <div className={styles["account-inner-box"]}>
-        <div className={styles["account-header"]}>
-          <div className={styles["account-header-heading"]}>Anand Vyas</div>
-          <div className={styles["account-header-details"]}>
-            <span>7888478435</span>
-            <span>anandvyas1290@gmail.com</span>
-          </div>
-          <div className={styles["account-header-btn"]}>Edit Profile</div>
-        </div>
-        <div className={styles["account-body"]}>
-          <div className={styles["account-body-content"]}>
-            <div className={styles["account-body-menu"]}>
-              {profileMenu.map((item) => (
-                <ul key={item._id}>
-                  <li>
-                    <span onClick={() => changeItem(item.link)}>
-                      {item.label}
-                    </span>
-                  </li>
-                </ul>
-              ))}
+        <div className={styles["account-header-box"]}>
+          <div className={styles["account-header"]}>
+            <div className={styles["account-header-heading"]}>Anand Vyas</div>
+            <div className={styles["account-header-details"]}>
+              <span>7888478435</span>
+              <span>anandvyas1290@gmail.com</span>
             </div>
-            <div className={styles["account-body-"]}></div>
+            <div className={styles["account-header-btn"]}>Edit Profile</div>
+          </div>
+        </div>
+
+        <div className={styles["account-body"]}>
+          <div className={styles["account-body-inner"]}>
+            <div className={styles["account-body-content"]}>
+              <div className={styles["account-body-menu"]}>
+                <ul>
+                  {profileMenu.map((item) => (
+                    <li key={item._id}>
+                      <span onClick={() => changeItem(item.link)}>
+                        {item.label}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className={styles["account-body-menu-desc"]}>
+                fuvbiklbnlu
+              </div>
+            </div>
           </div>
         </div>
       </div>
