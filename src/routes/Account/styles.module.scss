@@ -32,33 +32,81 @@
             }
         }
 
-
         .account-body {
             box-sizing: border-box;
             max-width: 1500px;
             margin: 0 auto;
             box-shadow: 0 2px 15px 0rgba(0, 0, 0, .15);
-            background-color: blueviolet;
+            background-color: #fff;
 
             .account-body-inner {
                 box-sizing: border-box;
                 max-width: 1440px;
                 margin: 0 auto;
                 padding: 30px 0 !important;
-                background-color: antiquewhite;
+                // background-color: rgb(248, 162, 48);
 
                 .account-body-content {
                     display: flex;
-                    // align-items: center;
-
-                    background-color: darkgoldenrod;
+                    background: transparent;
 
                     .account-body-menu {
+
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: #535665;
+                        min-width: 260px;
+                        background-color: #edf1f7;
+
                         ul {
+                            position: sticky;
+                            top: 10px;
                             list-style-type: none;
 
-                            li {}
+                            li {
+                                display: flex;
+                                align-items: center;
+                                gap: 5px;
+                                margin-left: 10px;
+                                margin-right: 0;
+                                padding: 20px;
+                                cursor: pointer;
+
+                                // background-color: #282c3f;
+                                &::after {
+                                    background-color: #fff;
+                                }
+
+                                .account-body-menu-img {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    width: 30px;
+                                    height: 30px;
+                                    border-radius: 50%;
+                                    background-color: #282c3f;
+
+                                    img {
+                                        // background-size: cover;
+                                        width: 60%;
+                                        height: 60%;
+                                    }
+                                }
+
+
+                            }
                         }
+                    }
+
+                    .account-body-menu-desc {
+                        overflow: scroll;
+                        width: 100%;
+                        padding: 30px 0 30px 30px;
+                        background-color: cyan;
+
+                        .account-menu-desc-header {}
+
+                        .account-menu-desc-body {}
                     }
                 }
             }
