@@ -2,12 +2,20 @@ import React, { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 import { Layout } from "antd";
 
+import { app } from "firebase-config";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+} from "firebase/auth";
+
 import Header from "container/Header";
 import Cart from "cart/Cart";
 import AddressDrawer from "components/AddressDrawer";
-
 // import { footerText } from "util/config";
 import App from "routes/index";
+
+import { getAPI } from "utils/Api";
 
 // const AddressDrawer = React.lazy(() => import("components/AddressDrawer"));
 const FilterDrawer = React.lazy(() => import("components/FilterDrawer"));
@@ -25,20 +33,43 @@ const MainApp = (props) => {
   // console.log(props);
   // console.log(match);
 
-  //address drawer handlers
+  //toggle handlers
   const toggleAddressDrawer = () => {
     setState({ addressDrawer: !state.addressDrawer });
   };
 
-  //cart modal handlers
   const toggleCartModal = () => {
     setState({ modal: !state.modal });
   };
 
-  //filter drawer handlers
   const toggleFilterDrawer = () => {
     setState({ filterDrawer: !state.filterDrawer });
   };
+
+  const fetchAddresses = async () => {
+    const response = await fetch(
+      "https://instantfoodorder-default-rtdb.asia-southeast1.firebasedatabase.app/Addresses"
+    );
+    if (!response.ok) {
+      throw new Error("Something Went Wrong!");
+    }
+
+    const responseData = await response.json();
+    console.log(responseData);
+  };
+
+  useEffect(() => {
+    // fetchAddresses();
+    getAPI(
+      "https://instantfoodorder-default-rtdb.asia-southeast1.firebasedatabase.app/Addresses"
+    )
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
 
   useEffect(() => {
     const bodyTag = document.getElementsByTagName("body").item(0);
