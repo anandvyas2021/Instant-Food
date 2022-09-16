@@ -18,9 +18,11 @@ const Header = (props) => {
   };
 
   useEffect(() => {
-    if (window.location.pathname) {
+    console.log(window.location);
+    if (window.location.pathname.replace("/", "")) {
       let currentMenuItem = window.location.pathname.replace("/", "");
-      document.querySelector(`.${currentMenuItem}`).style.color = "#f18155";
+      document.querySelector(`.${currentMenuItem}`) &&
+        (document.querySelector(`.${currentMenuItem}`).style.color = "#f18155");
     }
   }, []);
 
