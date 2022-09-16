@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./styles.module.css";
 
 import { Link } from "react-router-dom";
-import { carouselList } from "config";
+import { carouselList } from "utils/config";
 
 export default function Carousel() {
   return (

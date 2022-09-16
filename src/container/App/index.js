@@ -6,8 +6,8 @@ import MainApp from "./MainApp";
 
 const App = (props) => {
   const location = useLocation();
-  console.log(location);
-  console.log(props);
+  // console.log(location);
+  // console.log(props);
 
   return (
     <Routes>

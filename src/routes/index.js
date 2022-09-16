@@ -2,6 +2,7 @@ import React from "react";
 import { useRoutes } from "react-router-dom";
 
 const Home = React.lazy(() => import("./Home"));
+const Search = React.lazy(() => import("./Search"));
 const Offers = React.lazy(() => import("./Offers"));
 const Account = React.lazy(() => import("./Account"));
 const Help = React.lazy(() => import("./Help"));
@@ -11,6 +12,10 @@ const App = (props) => {
     {
       path: "/",
       element: <Home {...props} />,
+    },
+    {
+      path: "/search",
+      element: <Search {...props} />,
     },
     {
       path: "/offers",
@@ -26,6 +31,7 @@ const App = (props) => {
       element: <Help {...props} />,
     },
   ]);
+  // return routes;
   return <React.Suspense fallback={<p>Loading</p>}>{routes}</React.Suspense>;
 };
 

@@ -1,0 +1,41 @@
+.custom-input-box {
+    box-sizing: border-box;
+    position: relative;
+
+    input {
+        box-sizing: border-box;
+        width: 100%;
+        border: 0.8px solid rgb(167, 141, 141);
+        padding: 1.25rem;
+        outline: none;
+        font-size: 20px;
+
+        &:focus {
+            box-shadow: 0 1px 7px 1px #d4d5d9;
+        }
+    }
+
+    .custom-input-clear-text {
+        position: absolute;
+        top: 20px;
+        right: 13px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 500;
+        color: #fc8019;
+    }
+
+    .custom-input-clear-icon {
+        position: absolute;
+        top: 18px;
+        right: 13px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

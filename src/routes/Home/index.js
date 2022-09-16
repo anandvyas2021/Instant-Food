@@ -5,18 +5,19 @@ import FilterImg from "assets/filter.png";
 import search from "assets/NavIcons/search.png";
 
 import { NavLink } from "react-router-dom";
-import { filterOptions, restaurantData } from "config";
+import { filterOptions, restaurantData } from "utils/config";
 import RestaurantCard from "custom/RestaurantCard";
+import Slick from "custom/Slick";
 
 const MealsSummary = React.lazy(() => import("components/Meals/MealsSummary"));
-const Carousel = React.lazy(() => import("components/Carousel"));
+const Carousel = React.lazy(() => import("custom/Carousel"));
 
 export default function Home(props) {
   const [state, setState] = useState({ filterStuck: false });
 
   const ref = useRef(null);
   const handleScroll = useCallback(() => {
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
   }, []);
 
   // useEffect(() => {
@@ -41,9 +42,8 @@ export default function Home(props) {
     const allListItems = document.querySelectorAll(".item");
     const listItem = document.querySelector(`.${className}`);
     // listItem.classList.add(styles.custom);
-    console.log(allListItems);
+
     for (let i = 0; i <= allListItems.length; i++) {
-      console.log(allListItems[i]);
       allListItems[i].classList.add(styles.none);
       // allListItems[i].classList.remove(styles.none);
     }
@@ -58,7 +58,7 @@ export default function Home(props) {
       <MealsSummary />
       <div className={styles["home-body"]}>
         <div className={styles["home-carousel-container"]}>
-          <Carousel />
+          <Slick />
         </div>
 
         <div
