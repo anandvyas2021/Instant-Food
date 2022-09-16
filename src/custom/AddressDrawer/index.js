@@ -5,7 +5,8 @@ import styles from "./styles.module.scss";
 import closeBtn from "assets/AddressDrawer/close.png";
 import gpsIcon from "assets/AddressDrawer/gps.png";
 
-import { savedAddresses } from "config";
+import Input from "components/BasicComponents/Input";
+import { savedAddresses } from "utils/config";
 
 const Backdrop = (props) => {
   return (
@@ -22,9 +23,8 @@ const DrawerOverlay = (props) => {
     gpsSelector: false,
   });
 
-  const searchHandler = (e) => {
-    console.log(e.target.value);
-    setState({ searchedAddress: e.target.value });
+  const searchHandler = (value) => {
+    setState({ searchedAddress: value });
   };
   const clearSearch = () => {
     setState({ searchedAddress: "" });
@@ -42,21 +42,14 @@ const DrawerOverlay = (props) => {
               <img src={closeBtn} alt="close" />
             </div>
           </div>
-          <div className={styles["address-drawer-search"]}>
-            <input
+          <div className={styles["address-drawer-search-box"]}>
+            <Input
               type="text"
               placeholder="Search for area, street name.."
-              onChange={(e) => searchHandler(e)}
+              onChange={searchHandler}
               value={state.searchedAddress}
+              clearType="text"
             />
-            {state.searchedAddress.length > 0 && (
-              <span
-                className={styles["address-drawer-search-clear"]}
-                onClick={clearSearch}
-              >
-                Cancel
-              </span>
-            )}
           </div>
         </div>
         <div className={styles["address-drawer-lower-section"]}>

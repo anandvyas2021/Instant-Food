@@ -1,0 +1,17 @@
+.custom-button-box {
+    button {
+        border: 1px solid #fff;
+        padding: 10px 20px;
+        color: #fff;
+        background-color: transparent;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #e6e6e6;
+            color: #37718e;
+        }
+    }
+}

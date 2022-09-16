@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Slider from "react-slick";
-import { carouselList } from "config";
+import { carouselList } from "utils/config";
 
 function NextArrow(props) {
   const { className, style, onClick } = props;
@@ -19,7 +19,6 @@ function NextArrow(props) {
 }
 
 function PrevArrow(props) {
-  console.log(props);
   const { className, style, onClick } = props;
   return (
     <div

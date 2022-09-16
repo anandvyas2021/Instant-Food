@@ -31,7 +31,7 @@
 
         .address-drawer-upper-section {
             box-sizing: border-box;
-            padding-right: 50px;
+            padding-right: 54px;
             background-color: whitesmoke;
             top: 0;
             // background-color: chocolate;
@@ -54,33 +54,10 @@
                 }
             }
 
-            .address-drawer-search {
+            .address-drawer-search-box {
                 box-sizing: border-box;
-                position: relative;
                 padding: 1rem 0;
                 // background-color: darkkhaki;
-
-                input {
-                    box-sizing: border-box;
-                    width: 100%;
-                    border: 0.8px solid rgb(167, 141, 141);
-                    padding: 0.9rem !important;
-                    outline: none;
-                    font-size: medium;
-
-                    &:focus {
-                        box-shadow: 0 1px 7px 1px #d4d5d9;
-                    }
-                }
-
-                .address-drawer-search-clear {
-                    position: absolute;
-                    top: 33px;
-                    right: 13px;
-                    cursor: pointer;
-                    font-weight: 500;
-                    color: #fc8019;
-                }
             }
         }
 

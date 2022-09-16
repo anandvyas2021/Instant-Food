@@ -11,14 +11,14 @@ import {
 
 import Header from "container/Header";
 import Cart from "cart/Cart";
-import AddressDrawer from "components/AddressDrawer";
+import AddressDrawer from "custom/AddressDrawer";
 // import { footerText } from "util/config";
 import App from "routes/index";
 
 import { getAPI } from "utils/Api";
 
-// const AddressDrawer = React.lazy(() => import("components/AddressDrawer"));
-const FilterDrawer = React.lazy(() => import("components/FilterDrawer"));
+// const AddressDrawer = React.lazy(() => import("custom/AddressDrawer"));
+const FilterDrawer = React.lazy(() => import("custom/FilterDrawer"));
 
 const { Content, Footer } = Layout;
 

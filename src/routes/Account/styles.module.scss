@@ -1,33 +1,43 @@
 .account-main-container {
     box-sizing: border-box;
     padding: 0 20px;
-    background-color: brown;
+    background-color: #37718e;
 
     .account-inner-box {
         box-sizing: border-box;
         width: 100%;
         min-height: 100vh;
-        background: #37718e;
+        // background-color: brown;
 
-        .account-header-box {
+        .account-header-container {
             box-sizing: border-box;
             max-width: 1440px;
             padding: 40px 0 0 0;
             margin: 0px auto;
-            background-color: cornflowerblue;
+            // background-color: cornflowerblue;
 
             .account-header {
-                margin-top: 30px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 25px;
                 margin-bottom: 30px;
                 color: #fff;
-                background-color: hotpink;
+                padding: 10px;
+                // background-color: hotpink;
 
-                .account-header-heading {}
+                .account-header-heading {
+                    font-size: 32px;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                }
 
-                .account-header-details {}
-
-                .account-header-btn {
-                    // float: right
+                .account-header-details {
+                    display: flex;
+                    gap: 10px;
+                    margin-top: 2px;
+                    font-size: 16px;
                 }
             }
         }
@@ -51,7 +61,6 @@
                     background: transparent;
 
                     .account-body-menu {
-
                         font-size: 18px;
                         font-weight: 600;
                         color: #535665;
@@ -71,8 +80,8 @@
                                 margin-right: 0;
                                 padding: 20px;
                                 cursor: pointer;
-
                                 // background-color: #282c3f;
+
                                 &::after {
                                     background-color: #fff;
                                 }
@@ -87,13 +96,11 @@
                                     background-color: #282c3f;
 
                                     img {
-                                        // background-size: cover;
                                         width: 60%;
                                         height: 60%;
+                                        object-fit: cover;
                                     }
                                 }
-
-
                             }
                         }
                     }
@@ -102,7 +109,7 @@
                         overflow: scroll;
                         width: 100%;
                         padding: 30px 0 30px 30px;
-                        background-color: cyan;
+                        // background-color: cyan;
 
                         .account-menu-desc-header {}
 
