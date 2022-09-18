@@ -2,7 +2,7 @@ import React, {
   useState,
   // useEffect
 } from "react";
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 import star from "assets/star.png";
 import offer from "assets/NavIcons/offer.png";
 
@@ -29,6 +29,7 @@ export default function RestaurantCard(props) {
   const mouseLeaveCard = () => {};
   // console.log(state.mouseHover);
   const { data } = props;
+
   return (
     <div className={styles["restro-card-box"]}>
       <div className={styles["restro-card-ribbon-wrapper"]}>
@@ -94,6 +95,7 @@ export default function RestaurantCard(props) {
           <div>{"•"}</div>
           <div>{data.cost}</div>
         </div>
+
         {data.offer_available && (
           <div className={styles["restro-card-offers"]}>
             <span>

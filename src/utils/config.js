@@ -134,6 +134,41 @@ export const restaurantData = [
   },
 ];
 
+export const supportMenu = [
+  {
+    _id: "previous_orders",
+    label: "Help with orders",
+    link: "/previous-orders",
+  },
+  { _id: "general", label: "General issues", link: "/issues/general" },
+  {
+    _id: "partner_onboarding",
+    label: "Partner Onboarding",
+    link: "/issues/partner-onboarding",
+  },
+  { _id: "legal", label: "Legal, Terms & Conditions", link: "/issues/legal" },
+  {
+    _id: "faq",
+    label: "FAQs",
+    link: "/faq",
+  },
+  {
+    _id: "instand_faq",
+    label: "Instant One FAQs",
+    link: "/issues/instant-one-faq",
+  },
+  {
+    _id: "instand_money",
+    label: "Instant Money FAQs",
+    link: "/issues/instant-money-faq",
+  },
+  {
+    _id: "instand_dineout",
+    label: "Instant Dineout FAQs",
+    link: "/issues/dineout",
+  },
+];
+
 export const profileMenu = [
   { _id: "orders", icon: Orders, label: "Orders", link: "/orders" },
   { _id: "super", icon: Brand, label: "Super", link: "/super" },
