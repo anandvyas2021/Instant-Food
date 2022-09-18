@@ -18,7 +18,6 @@ const Header = (props) => {
   };
 
   useEffect(() => {
-    console.log(window.location);
     if (window.location.pathname.replace("/", "")) {
       let currentMenuItem = window.location.pathname.replace("/", "");
       document.querySelector(`.${currentMenuItem}`) &&
