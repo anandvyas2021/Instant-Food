@@ -3,7 +3,8 @@ import styles from "./styles.module.scss";
 import offerBanner from "assets/offers.webp";
 
 import Tabs from "components/BasicComponents/Tabs";
-import { offersTabpanes } from "utils/config";
+import RestaurantCard from "custom/RestaurantCard";
+import { offersTabpanes, restaurantData } from "utils/config";
 
 export default function Offers() {
     const onClick = (e) => {
@@ -35,7 +36,21 @@ export default function Offers() {
                 <Tabs options={offersTabpanes} onClick={onClick} />
             </div>
 
-            <div className={styles["offers-body-container"]}></div>
+            <div className={styles["offers-body-container"]}>
+                <div className={styles["offers-body-header"]}>
+                    <div className={styles["offers-body-heading"]}>
+                        All offers (683)
+                    </div>
+                    <div className={styles["offers-body-desc"]}>
+                        All offers and deals, from restaurants near you
+                    </div>
+                </div>
+                <div className={styles["offers-body-content"]}>
+                    {restaurantData.map((data, i) => (
+                        <RestaurantCard ribbon={false} key={i} data={data} />
+                    ))}
+                </div>
+            </div>
         </div>
     );
 }

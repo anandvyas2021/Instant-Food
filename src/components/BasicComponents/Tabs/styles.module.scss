@@ -2,36 +2,37 @@
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    border-bottom: 1px solid #d4d5d9;
 
-    .custom-tabs-inner {
-        max-width: 1440px;
-        margin: 0 auto;
+    .custom-tabs {
+        display: flex;
         height: 100%;
-        // background-color: rgb(27, 219, 27);
+        gap: 30px;
+        font-size: 22px;
+        font-weight: 500;
+        // background-color: darkslategray;
 
-        .custom-tabs {
+        .custom-tabpanes {
+            box-sizing: border-box;
             display: flex;
+            align-items: center;
             height: 100%;
-            gap: 30px;
-            font-size: 22px;
-            font-weight: 500;
-            // background-color: darkslategray;
+            color: #93959f;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            // background-color: dodgerblue;
 
-            .custom-tabpanes {
-                box-sizing: border-box;
-                display: flex;
-                align-items: center;
-                height: 100%;
-                color: #93959f;
-                cursor: pointer;
-                border-bottom: 3px solid transparent;
-                // background-color: dodgerblue;
-
-                &:hover {
-                    color: #282c3f;
-                }
+            &:hover {
+                color: #282c3f;
             }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1370px) and (max-width: 1630px) {
+    .custom-tabs-container {
+        .custom-tabs {
+            font-size: 16px;
         }
     }
 }

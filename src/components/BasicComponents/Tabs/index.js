@@ -25,33 +25,31 @@ export default function Tabs(props) {
     useEffect(() => {
         if (window.location.search) {
             let currentMenuItem = window.location.search.replace("?=", "");
-            document.querySelector(`.${currentMenuItem}`) &&
-                (document.querySelector(
-                    `.${currentMenuItem}`
-                ).style.borderBottom = "3px solid #000");
-            // color: "#282c3f",
 
-            // {borderBottom: "3px solid #000",
-            // color: "#282c3f",}
+            if (document.querySelector(`.${currentMenuItem}`)) {
+                document.querySelector(
+                    `.${currentMenuItem}`
+                ).style.borderBottom = "3px solid #000";
+                document.querySelector(`.${currentMenuItem}`).style.color =
+                    "#282c3f";
+            }
         }
     }, []);
 
     return (
         <div className={styles["custom-tabs-container"]}>
-            <div className={styles["custom-tabs-inner"]}>
-                <div className={styles["custom-tabs"]}>
-                    {props.options.map((item, i) => (
-                        <div
-                            key={item._id}
-                            className={`${styles["custom-tabpanes"]} ${item.slug}`}
-                            id="tab-links"
-                            tabIndex={i}
-                            onClick={(e) => changeTabHandler(e, item.slug)}
-                        >
-                            {item.label}
-                        </div>
-                    ))}
-                </div>
+            <div className={styles["custom-tabs"]}>
+                {props.options.map((item, i) => (
+                    <div
+                        key={item._id}
+                        className={`${styles["custom-tabpanes"]} ${item.slug}`}
+                        id="tab-links"
+                        tabIndex={i}
+                        onClick={(e) => changeTabHandler(e, item.slug)}
+                    >
+                        {item.label}
+                    </div>
+                ))}
             </div>
         </div>
     );

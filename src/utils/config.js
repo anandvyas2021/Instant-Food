@@ -56,15 +56,15 @@ export const carouselList = [
 ];
 
 export const filterOptions = [
-    { _id: "relevance", label: "Relevance", className: "relevance" },
+    { _id: "relevance", label: "Relevance", slug: "relevance" },
     {
         _id: "delivery_time",
         label: "Delivery Time",
-        className: "delivery_time",
+        slug: "delivery_time",
     },
-    { _id: "rating", label: "Rating", className: "rating" },
-    { _id: "costlth", label: "Cost:Low To High", className: "costlth" },
-    { _id: "costhtl", label: "Cost:High To Low", className: "costhtl" },
+    { _id: "rating", label: "Rating", slug: "rating" },
+    { _id: "costlth", label: "Cost:Low To High", slug: "costlth" },
+    { _id: "costhtl", label: "Cost:High To Low", slug: "costhtl" },
 ];
 
 export const restaurantData = [
@@ -189,6 +189,6 @@ export const profileMenu = [
 ];
 
 export const offersTabpanes = [
-    { _id: 0, label: "Restaurant Offers", slug: "restaurant" },
-    { _id: 1, label: "Payment Offers/Coupons", slug: "payment" },
+    { _id: 0, label: "Restaurant offers", slug: "restaurant" },
+    { _id: 1, label: "Payment offers/Coupons", slug: "payment" },
 ];
