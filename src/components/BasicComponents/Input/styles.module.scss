@@ -39,3 +39,18 @@
         }
     }
 }
+
+
+
+@media only screen and (min-width: 1370px) and (max-width: 1630px) {
+    .custom-input-box {
+        input {
+            padding: 1rem;
+            font-size: 16px;
+        }
+
+        .custom-input-clear-text {
+            font-size: 16px;
+        }
+    }
+}
