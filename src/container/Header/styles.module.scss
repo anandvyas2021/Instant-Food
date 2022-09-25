@@ -251,14 +251,16 @@
     }
 }
 
-@media (max-width: 1025px) and (max-width: 1280px) {
-    body {
-        background-color: green;
-    }
-}
+// @media (max-width: 1025px) and (max-width: 1280px) {
+//     body {
+//         background-color: green;
+//     }
+// }
 
-@media (min-width: 1025px) and (max-width: 1280px) {
-    body {
-        background-color: rgb(20, 232, 255);
-    }
-}
+// @media (min-width: 1025px) and (max-width: 1280px) {
+//     body {
+//         background-color: rgb(20, 232, 255);
+//     }
+// }
+
+@media only screen and (min-width: 1030px) and (max-width: 1366px) {}
