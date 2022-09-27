@@ -1,10 +1,12 @@
 .offers-page {
     .offers-banner-container {
         width: 100%;
+        box-sizing: border-box;
         height: 300px;
         background-color: #005062;
 
         .offers-banner {
+            box-sizing: border-box;
             max-width: 1440px;
             min-width: 1440px;
             height: 100%;
@@ -43,7 +45,9 @@
                     width: 200px;
                     height: 200px;
 
+
                     img {
+                        float: right;
                         height: 100%;
                     }
                 }
@@ -62,7 +66,7 @@
 
     .offers-body-container {
         max-width: 1440px;
-        // min-width: 1200px;
+        min-width: 1440px;
         margin: 50px auto 0;
         // background-color: blueviolet;
 
@@ -83,17 +87,30 @@
             }
         }
 
-        .offers-body-content {
+        .restaurant-offers-body-content {
             box-sizing: border-box;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 30px;
             padding: 5px;
         }
+
+        .payment-offers-body-content {
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 5px;
+        }
     }
 }
 
-@media only screen and (min-width: 1370px) and (max-width: 1630px) {
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {}
+
+
+@media only screen and (min-width: 1370px) and (max-width: 1605px) {
     .offers-page {
         .offers-banner-container {
             .offers-banner {
@@ -109,15 +126,8 @@
         }
 
         .offers-body-container {
+            min-width: 1200px;
             max-width: 1200px;
         }
-    }
-}
-
-
-
-@media (min-width: 1025px) and (max-width: 1280px) {
-    body {
-        background-color: green;
     }
 }

@@ -156,26 +156,6 @@
     border: none;
 }
 
-
-.scrollFadeOut {
-    /* animation: ease-out 300s; */
-}
-
-.scrollStyles {
-    background-color: #7f2c0c;
-    color: white;
-    /* width: 100vw; */
-}
-
-.custom {
-    border-bottom: 1.5px solid black;
-}
-
-.none {
-    border: none;
-}
-
-
 .nav-list-item {
     display: flex;
     align-items: center;
@@ -198,6 +178,47 @@
     }
 }
 
+@media only screen and (min-device-width : 360px) and (max-device-width : 640px) {
+    .body-main-container {
+        .main-image-section {}
+
+        .home-body {
+            // max-width: ;
+            // min-width: ;
+
+            .home-restaurant-list-container {
+                box-sizing: border-box;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+                padding: 5px;
+                /* background-color: cornflowerblue; */
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .body-main-container {
+        .main-image-section {}
+
+        .home-body {
+            // max-width: initial;
+            // min-width: initial;
+        }
+    }
+}
+
+@media only screen and (min-width: 1030px) and (max-width: 1366px) {
+    .body-main-container {
+        .home-body {
+            // max-width: 1200px;
+            // min-width: 1200px;
+        }
+    }
+}
 
 @media only screen and (min-width: 1370px) and (max-width: 1630px) {
     .body-main-container {
