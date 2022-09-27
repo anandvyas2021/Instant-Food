@@ -1,0 +1,70 @@
+.coupon-card-box {
+    background-color: chartreuse;
+    padding: 30px;
+
+    .coupon-card {
+        background-color: blueviolet;
+
+        .coupon-card-header {
+            display: flex;
+            background-color: brown;
+
+            .coupon-card-sticker {
+                display: flex;
+                align-items: center;
+                height: 35px;
+                font-size: 14px;
+                font-weight: 600;
+                border: 1px solid #daceb7;
+                background-color: #fffae6;
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+
+                .coupon-card-sticker-code {
+                    margin: 0 10px;
+
+                    .coupon-card-sticker-cut-up {
+                        content: '';
+                    }
+
+                    .coupon-card-sticker-cut-down {}
+                }
+            }
+        }
+
+        .coupon-card-body {
+            margin: 15px 0;
+            background-color: cyan;
+
+            .coupon-card-body-title {
+                color: #3e4152;
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            .coupon-card-body-desc {
+                color: #686b78;
+                font-size: 14px;
+                margin-top: 8px;
+                margin-bottom: 10px;
+            }
+
+            .coupon-card-body-extra {
+                font-size: 10px;
+                font-weight: 600;
+                // margin-bottom: 8px;
+                cursor: pointer;
+                color: #5d8ed5;
+            }
+        }
+
+        .coupon-card-footer {
+            background-color: burlywood;
+        }
+    }
+}

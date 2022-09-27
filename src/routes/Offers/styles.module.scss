@@ -87,10 +87,18 @@
             }
         }
 
-        .offers-body-content {
+        .restaurant-offers-body-content {
             box-sizing: border-box;
             display: grid;
             grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            padding: 5px;
+        }
+
+        .payment-offers-body-content {
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
             padding: 5px;
         }

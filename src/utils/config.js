@@ -21,6 +21,12 @@ import Payments from "assets/AccountsIcons/payments.png";
 import Addresses from "assets/AccountsIcons/addresses.png";
 import Settings from "assets/AccountsIcons/settings.png";
 
+import paytm from "assets/CouponIcons/paytm.webp";
+import mobikwik from "assets/CouponIcons/mobikwik.webp";
+import freecharge from "assets/CouponIcons/freecharge.webp";
+import ubi from "assets/CouponIcons/ubi.webp";
+import fbc from "assets/CouponIcons/fbc.webp";
+
 export const navList = [
     { _id: "search", label: "Search", icon: search, link: "/search" },
     { _id: "offers", label: "Offers", icon: offer, link: "/offers" },
@@ -131,6 +137,44 @@ export const restaurantData = [
         delivery_time: "36 mins",
         cost: "₹300 FOR TWO",
         offer_available: false,
+    },
+];
+
+export const couponsData = [
+    {
+        _id: 0,
+        image: paytm,
+        title: "Get assured cashback between ₹25 to ₹100 using Paytm wallet",
+        desc: "Assured cashback between ₹25 to ₹100 on Paytm wallet transactions above ₹399",
+        code: "PAYTMSAVE",
+    },
+    {
+        _id: 1,
+        image: mobikwik,
+        title: "Get up to ₹100 cashback using MobiKwik wallet",
+        desc: "Cashback up to ₹100 on MobiKwik transactions above ₹249",
+        code: "MBK100",
+    },
+    {
+        _id: 2,
+        image: freecharge,
+        title: "Get flat ₹75 cashback using Freecharge",
+        desc: "Applicable on Freecharge Pay Later or Wallet transactions above ₹249",
+        code: "FCH75",
+    },
+    {
+        _id: 3,
+        image: fbc,
+        title: "Get 20% discount using Federal Bank Credit Cards",
+        desc: "Maximum discount up to ₹120 on orders above ₹250",
+        code: "FEDERALCC",
+    },
+    {
+        _id: 4,
+        image: ubi,
+        title: "Get 25% discount using Union Bank of India Cards",
+        desc: "Maximum discount up to ₹100 on orders above ₹199",
+        code: "UBI100",
     },
 ];
 
