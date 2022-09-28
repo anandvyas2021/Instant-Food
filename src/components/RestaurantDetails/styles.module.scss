@@ -1,0 +1,109 @@
+@import '../../index.css';
+
+.restaurant-details-page {
+    width: 100%;
+    background-color: antiquewhite;
+
+    .restaurant-details-main {
+        .restaurant-details-header {
+            width: 100%;
+            // background-color: chocolate;
+
+            .restaurant-details-breadcrumb {
+                min-width: 1440px;
+                max-width: 1440px;
+                margin: 0 auto;
+                // padding: 5px 0;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                font-size: 10px;
+                color: #93959f;
+                // background-color: coral;
+
+                span {
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #535665;
+                    }
+                }
+            }
+        }
+
+        .restaurant-details-about {
+            width: 100%;
+            background-color: black;
+
+            .restaurant-details-about-inner {
+                box-sizing: border-box;
+                min-width: 1440px;
+                max-width: 1440px;
+                margin: 0 auto;
+                padding: 30px 0;
+                display: flex;
+                gap: 50px;
+                background-color: #ededed;
+
+
+                .restaurant-details-about-left {
+                    background-color: burlywood;
+
+                    img {
+                        width: 250px;
+                        height: 160px;
+                        object-fit: cover;
+                    }
+                }
+
+                .restaurant-details-about-middle {
+                    background-color: blueviolet;
+
+                    .restaurant-details-about-middle-title {}
+
+                    .restaurant-details-about-middle-tags {}
+
+                    .restaurant-details-about-middle-address {
+                        .restaurant-details-about-middle-address-first {}
+
+                        .restaurant-details-about-middle-address-arrow {}
+                    }
+
+                    .restaurant-details-about-middle-extras {
+                        .middle-extra {
+                            .middle-extra-value {}
+
+                            .middle-extra-text {}
+                        }
+                    }
+                }
+
+                .restaurant-details-about-right {
+                    background-color: cadetblue;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (min-width: 1370px) and (max-width: 1630px) {
+    .restaurant-details-page {
+        .restaurant-details-main {
+            .restaurant-details-header {
+                .restaurant-details-breadcrumb {
+                    min-width: 1200px;
+                    max-width: 1200px;
+                }
+            }
+
+            .restaurant-details-about {
+                .restaurant-details-about-inner {
+                    min-width: 1200px;
+                    max-width: 1200px;
+                }
+            }
+        }
+    }
+}

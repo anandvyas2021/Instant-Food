@@ -6,33 +6,40 @@ const Search = React.lazy(() => import("./Search"));
 const Offers = React.lazy(() => import("./Offers"));
 const Account = React.lazy(() => import("./Account"));
 const Help = React.lazy(() => import("./Help"));
+const RestaurantDetails = React.lazy(() =>
+    import("components/RestaurantDetails")
+);
 
 const App = (props) => {
-  let routes = useRoutes([
-    {
-      path: "/",
-      element: <Home {...props} />,
-    },
-    {
-      path: "/search",
-      element: <Search {...props} />,
-    },
-    {
-      path: "/offers",
-      element: <Offers {...props} />,
-    },
-    {
-      path: "/my-account",
-      element: <Account {...props} />,
-    },
-    { path: "/my-account/:key", element: <Account {...props} /> },
-    {
-      path: "/support",
-      element: <Help {...props} />,
-    },
-  ]);
-  // return routes;
-  return <React.Suspense fallback={<p>Loading</p>}>{routes}</React.Suspense>;
+    let routes = useRoutes([
+        {
+            path: "/",
+            element: <Home {...props} />,
+        },
+        {
+            path: "/search",
+            element: <Search {...props} />,
+        },
+        {
+            path: "/offers",
+            element: <Offers {...props} />,
+        },
+        {
+            path: "/my-account",
+            element: <Account {...props} />,
+        },
+        // { path: "/my-account/:key", element: <Account {...props} /> },
+        {
+            path: "/support",
+            element: <Help {...props} />,
+        },
+        {
+            path: "/restaurant/:key",
+            element: <RestaurantDetails {...props} />,
+        },
+    ]);
+    // return routes;
+    return <React.Suspense fallback={<p>Loading</p>}>{routes}</React.Suspense>;
 };
 
 export default App;

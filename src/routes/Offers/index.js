@@ -9,7 +9,9 @@ import CouponOffers from "./Components/CouponOffers";
 import { offersTabpanes, restaurantData, couponsData } from "utils/config";
 
 export default function Offers() {
-    const [offer, setOffer] = useState("restaurant");
+    const [offer, setOffer] = useState(
+        window.location.search.replace("?=", "")
+    );
     const onClick = (e) => {
         setOffer(e);
         console.log(e);

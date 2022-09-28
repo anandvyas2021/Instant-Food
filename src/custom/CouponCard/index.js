@@ -6,11 +6,12 @@ export default function CouponCard(props) {
     const [state, setState] = useState({
         btnLabel: "COPY CODE",
         btnState: true,
+        code: null,
     });
     const { data } = props;
 
-    const copyHandler = () => {
-        setState({ btnLabel: "COPIED", btnState: false });
+    const copyHandler = (code) => {
+        setState({ btnLabel: "COPIED", btnState: false, code: code });
         console.log("object");
     };
     return (
@@ -41,9 +42,9 @@ export default function CouponCard(props) {
                     <Button
                         label={state.btnLabel}
                         onClick={() => {
-                            return state.btnState && copyHandler();
+                            return state.btnState && copyHandler(data.code);
                         }}
-                        disabled={!state.btnState}
+                        disabled={data.code === state.code}
                     />
                 </div>
             </div>
