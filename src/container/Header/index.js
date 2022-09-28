@@ -18,12 +18,12 @@ const Header = (props) => {
     };
 
     useEffect(() => {
-        if (window.location.pathname.replace("/", "")) {
-            let currentMenuItem = window.location.pathname.replace("/", "");
-            document.querySelector(`.${currentMenuItem}`) &&
-                (document.querySelector(`.${currentMenuItem}`).style.color =
-                    "#f18155");
-        }
+        // if (window.location.pathname.replace("/", "")) {
+        //     let currentMenuItem = window.location.pathname.replace("/", "");
+        //     document.querySelector(`.${currentMenuItem}`) &&
+        //         (document.querySelector(`.${currentMenuItem}`).style.color =
+        //             "#f18155");
+        // }
     }, []);
 
     return (

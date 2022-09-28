@@ -34,3 +34,16 @@ code {
 ::-webkit-scrollbar-thumb:hover {
     background: #153865;
 }
+
+.justify-content-center {
+    min-width: 1440px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 1370px) and (max-width: 1630px) {
+    .justify-content-center {
+        min-width: 1200px;
+        max-width: 1200px;
+    }
+}

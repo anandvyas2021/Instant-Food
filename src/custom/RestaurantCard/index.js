@@ -1,7 +1,5 @@
-import React, {
-    useState,
-    // useEffect
-} from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./styles.module.scss";
 import star from "assets/star.png";
 import offer from "assets/NavIcons/offer.png";
@@ -9,10 +7,11 @@ import offer from "assets/NavIcons/offer.png";
 import { Tag } from "antd";
 
 export default function RestaurantCard(props) {
+    const navigate = useNavigate();
     const [state, setState] = useState({ mouseHover: false });
 
     // useEffect(() => {
-    //   let card = document.querySelector(".restro-card-box");
+    //   let card = document.querySelector(".restaurant-card-box");
     //   console.log(card);
     //   console.log(state.mouseHover);
     //   // document.addEventListener('mouseover')
@@ -22,43 +21,56 @@ export default function RestaurantCard(props) {
 
     const mouseOverCard = () => {
         setState({ mouseHover: true });
-        let card = document.querySelector(".restro-card-box");
+        let card = document.querySelector(".restaurant-card-box");
         console.log(card);
     };
 
     const mouseLeaveCard = () => {};
+
+    const navigateToDetails = (id, path) => {
+        console.log(id, path);
+        navigate({
+            pathname: "/restaurant/" + path,
+            state: { restaId: id, details: data },
+        });
+    };
+
     // console.log(state.mouseHover);
     const { data } = props;
+    console.log(data);
 
     return (
-        <div className={styles["restro-card-box"]}>
+        <div
+            className={styles["restaurant-card-box"]}
+            onClick={() => navigateToDetails(data._id, data.name)}
+        >
             {props.ribbon && (
-                <div className={styles["restro-card-ribbon-wrapper"]}>
+                <div className={styles["restaurant-card-ribbon-wrapper"]}>
                     <span
-                        className={styles["restro-card-ribbon"]}
+                        className={styles["restaurant-card-ribbon"]}
                         style={data.ribbon_styles}
                     >
                         {data.ribbon}
                     </span>
-                    <span className={styles["restro-card-ribbon-corner"]} />
+                    <span className={styles["restaurant-card-ribbon-corner"]} />
                 </div>
             )}
 
             {/* <Badge.Ribbon text={data.ribbon} style={data.ribbon_styles} /> */}
             <div
-                className={styles["restro-card"]}
-                onMouseOver={() => mouseOverCard()}
-                onMouseLeave={() => mouseLeaveCard()}
+                className={styles["restaurant-card"]}
+                // onMouseOver={() => mouseOverCard()}
+                // onMouseLeave={() => mouseLeaveCard()}
             >
-                <div className={styles["restro-card-image"]}>
+                <div className={styles["restaurant-card-image"]}>
                     <img
                         src={data.image}
-                        alt="restro"
+                        alt="restaurant"
                         width="100%"
                         height="100%"
                     />
                 </div>
-                <div className={styles["restro-card-description"]}>
+                <div className={styles["restaurant-card-description"]}>
                     <h4
                         style={{
                             fontSize: "17px",
@@ -68,7 +80,7 @@ export default function RestaurantCard(props) {
                     >
                         {data.name}
                     </h4>
-                    <div className={styles["restro-card-tags"]}>
+                    <div className={styles["restaurant-card-tags"]}>
                         {data.tags.map((tag, i) => {
                             return (
                                 <Tag
@@ -83,7 +95,7 @@ export default function RestaurantCard(props) {
                         })}
                     </div>
                 </div>
-                <div className={styles["restro-card-details"]}>
+                <div className={styles["restaurant-card-details"]}>
                     <div
                         className={styles["details-rating"]}
                         style={{
@@ -110,7 +122,7 @@ export default function RestaurantCard(props) {
                 </div>
 
                 {data.offer_available && (
-                    <div className={styles["restro-card-offers"]}>
+                    <div className={styles["restaurant-card-offers"]}>
                         <span>
                             <img src={offer} alt="offer" />
                         </span>
@@ -120,8 +132,8 @@ export default function RestaurantCard(props) {
                     </div>
                 )}
 
-                <div className={styles["restro-card-footer"]}>
-                    <span className={styles["restro-card-footer-text"]}>
+                <div className={styles["restaurant-card-footer"]}>
+                    <span className={styles["restaurant-card-footer-text"]}>
                         {"QUICK VIEW"}
                     </span>
                 </div>
