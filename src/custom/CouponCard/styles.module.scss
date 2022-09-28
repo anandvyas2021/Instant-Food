@@ -1,13 +1,14 @@
 .coupon-card-box {
-    background-color: chartreuse;
     padding: 30px;
+    border: 1px solid#bbbeca;
+    background-color: antiquewhite;
 
     .coupon-card {
-        background-color: blueviolet;
+        // background-color: blueviolet;
 
         .coupon-card-header {
             display: flex;
-            background-color: brown;
+            // background-color: brown;
 
             .coupon-card-sticker {
                 display: flex;
@@ -16,7 +17,7 @@
                 font-size: 14px;
                 font-weight: 600;
                 border: 1px solid #daceb7;
-                background-color: #fffae6;
+                // background-color: #fffae6;
 
                 img {
                     width: 20px;
@@ -39,19 +40,19 @@
 
         .coupon-card-body {
             margin: 15px 0;
-            background-color: cyan;
+            // background-color: cyan;
 
             .coupon-card-body-title {
-                color: #3e4152;
                 font-size: 16px;
                 font-weight: 500;
+                color: #3e4152;
             }
 
             .coupon-card-body-desc {
-                color: #686b78;
                 font-size: 14px;
                 margin-top: 8px;
                 margin-bottom: 10px;
+                color: #686b78;
             }
 
             .coupon-card-body-extra {
@@ -64,7 +65,20 @@
         }
 
         .coupon-card-footer {
-            background-color: burlywood;
+            // background-color: burlywood;
+
+            button {
+                color: #fc8019;
+                border-color: #fc8019;
+                // #7f2c0c
+                // #fc8019;
+
+                &:hover {
+                    background-color: transparent;
+                    box-shadow: 0 2px 8px #d4d5d9;
+                    ;
+                }
+            }
         }
     }
 }

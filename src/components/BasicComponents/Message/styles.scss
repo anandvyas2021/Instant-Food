@@ -1,0 +1,110 @@
+.message {
+  position: fixed;
+  top: 11vh;
+  left: 10vw;
+  right: 10vw;
+  z-index: 9999;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  opacity: 0.9;
+}
+
+.content-box {
+  transition: all .3s;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 11px 18px;
+  border-radius: 4px;
+  // box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+
+  &.info {
+    background-color: #1890ff;
+    color: #fff;
+    // border: 1px #1890ff;
+    // box-shadow: 0px 1px 6px 0px #1890ff;
+  }
+
+  &.success {
+    background-color: #52c41a;
+    color: #fff;
+    // border: 2px ;
+    // box-shadow: 0px 1px 6px 0px #52c41a;
+  }
+
+  &.error {
+    background-color: #f5222d;
+    color: #fff;
+    // border: 1px solid ;
+    // box-shadow: 0px 1px 6px 0px #f5222d;
+  }
+
+  &.warn {
+    background-color: #faad14;
+    color: #fff;
+    // border: 2px #faad14;
+    // box-shadow: 0px 1px 6px 0px #faad14;
+  }
+
+  &.animate-in {
+    animation: fade-in .3s;
+    animation-timing-function: cubic-bezier(.08, .82, .17, 1);
+  }
+
+  &.animate-out {
+    animation: fade-out .3s;
+    animation-timing-function: cubic-bezier(.6, .04, .98, .34);
+  }
+}
+
+.message-icon {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+
+  &.info {
+    background: #1890ff;
+  }
+
+  &.success {
+    background: #52c41a;
+  }
+
+  &.error {
+    background: #f5222d;
+    // mask: url('../../../Assets/Icons/check-solid.svg');
+    // object-fit: cover;
+
+  }
+
+  &.warn {
+    background: #faad14;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
