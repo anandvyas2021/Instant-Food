@@ -2,7 +2,7 @@
 
 .restaurant-details-page {
     width: 100%;
-    background-color: antiquewhite;
+    // background-color: antiquewhite;
 
     .restaurant-details-main {
         .restaurant-details-header {
@@ -10,14 +10,10 @@
             // background-color: chocolate;
 
             .restaurant-details-breadcrumb {
-                min-width: 1440px;
-                max-width: 1440px;
-                margin: 0 auto;
-                // padding: 5px 0;
-                height: 30px;
                 display: flex;
                 align-items: center;
-                font-size: 10px;
+                height: 30px;
+                font-size: 14px;
                 color: #93959f;
                 // background-color: coral;
 
@@ -33,53 +29,157 @@
 
         .restaurant-details-about {
             width: 100%;
+            opacity: 0.9;
             background-color: black;
 
             .restaurant-details-about-inner {
                 box-sizing: border-box;
-                min-width: 1440px;
-                max-width: 1440px;
-                margin: 0 auto;
-                padding: 30px 0;
                 display: flex;
                 gap: 50px;
-                background-color: #ededed;
-
+                // background-color: #ededed;
 
                 .restaurant-details-about-left {
-                    background-color: burlywood;
+                    width: 250px;
+                    height: 250px;
+                    display: flex;
+                    align-items: center;
+                    // background-color: burlywood;
 
                     img {
-                        width: 250px;
-                        height: 160px;
+                        width: 100%;
+                        height: 180px;
                         object-fit: cover;
                     }
                 }
 
                 .restaurant-details-about-middle {
-                    background-color: blueviolet;
+                    min-width: 538px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    margin-top: 60px;
+                    color: white;
+                    // background-color: blueviolet;
 
-                    .restaurant-details-about-middle-title {}
+                    .restaurant-details-about-middle-title {
+                        font-size: 35px;
+                        // background-color: darkgray;
+                    }
 
-                    .restaurant-details-about-middle-tags {}
+                    .restaurant-details-about-middle-tags {
+                        font-size: 14px;
+                        opacity: 0.8;
+                        // background-color: darkcyan;
+
+                        .tags-commas::before {
+                            content: ', ';
+
+                            &:last-child {
+                                content: ' ';
+                            }
+                        }
+                    }
 
                     .restaurant-details-about-middle-address {
-                        .restaurant-details-about-middle-address-first {}
+                        display: flex;
+                        font-size: 14px;
+                        opacity: 0.8;
+                        // background-color: brown;
 
-                        .restaurant-details-about-middle-address-arrow {}
+                        .restaurant-details-about-middle-address-first {
+                            margin-left: 5px;
+                            font-weight: 700;
+                            cursor: pointer;
+                        }
+
+                        .restaurant-details-about-middle-address-arrow {
+                            margin-left: 5px;
+                            width: 15px;
+                            height: 15px;
+
+                            img {
+                                width: 100%;
+                            }
+                        }
                     }
 
                     .restaurant-details-about-middle-extras {
-                        .middle-extra {
-                            .middle-extra-value {}
+                        display: flex;
+                        margin-top: 7px;
 
-                            .middle-extra-text {}
+                        .middle-extra {
+                            padding: 0 35px;
+                            border-right: solid rgba(255, 255, 255, 0.4);
+                            // background-color: darkgreen;
+
+                            &:first-child {
+                                padding-left: 0;
+                                padding-right: 35px;
+                            }
+
+                            &:last-child {
+                                padding-right: 0;
+                                padding-left: 35px;
+                                border: none;
+                            }
+
+                            .middle-extra-value {
+                                font-size: 15px;
+                                font-weight: 600;
+                            }
+
+                            .middle-extra-text {
+                                opacity: 0.7;
+                                margin-top: 5px;
+                                font-size: 12px;
+                                font-weight: 400;
+                            }
                         }
                     }
                 }
 
                 .restaurant-details-about-right {
-                    background-color: cadetblue;
+                    padding: 60px 0;
+                    width: 300px;
+                    color: white;
+                    // background-color: cadetblue;
+
+                    fieldset {
+                        border-color: white;
+
+                        legend {
+                            text-transform: uppercase;
+                        }
+
+                        .restaurant-details-about-right-offers {
+                            padding: 10px 20px 10px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+
+                            .restaurant-details-about-right-offer {
+                                font-size: 14px;
+                                display: flex;
+                                gap: 5px;
+                                align-items: center;
+                                line-height: 1.3;
+
+                                .restaurant-details-about-right-offer-image {
+                                    width: 20px;
+                                    height: 20px;
+
+                                    img {
+                                        height: 100%;
+                                        filter: invert(100%) sepia(5%) saturate(20%) hue-rotate(138deg) brightness(106%) contrast(105%);
+                                    }
+                                }
+
+                                .restaurant-details-about-right-offer-text {}
+                            }
+                        }
+                    }
+
+
                 }
             }
         }
@@ -93,16 +193,12 @@
         .restaurant-details-main {
             .restaurant-details-header {
                 .restaurant-details-breadcrumb {
-                    min-width: 1200px;
-                    max-width: 1200px;
+                    font-size: 12px;
                 }
             }
 
             .restaurant-details-about {
-                .restaurant-details-about-inner {
-                    min-width: 1200px;
-                    max-width: 1200px;
-                }
+                .restaurant-details-about-inner {}
             }
         }
     }
