@@ -1,7 +1,9 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import styles from "./styles.module.scss";
-import star from "assets/star.png";
+import StarIcon from "assets/star.png";
+import OfferIcon from "assets/NavIcons/offer.png";
+import DownIcon from "assets/down.png";
 
 import { restaurantData } from "utils/config";
 
@@ -17,13 +19,21 @@ export default function RestaurantDetails(props) {
         <div className={styles["restaurant-details-page"]}>
             <div className={styles["restaurant-details-main"]}>
                 <div className={styles["restaurant-details-header"]}>
-                    <div className={styles["restaurant-details-breadcrumb"]}>
+                    <div
+                        className={`${
+                            styles["restaurant-details-breadcrumb"]
+                        } ${"justify-content-center"}`}
+                    >
                         <span>Home / Bangalore / Rainbow Drive / Wow!Momo</span>
                     </div>
                 </div>
 
                 <div className={styles["restaurant-details-about"]}>
-                    <div className={styles["restaurant-details-about-inner"]}>
+                    <div
+                        className={`${
+                            styles["restaurant-details-about-inner"]
+                        } ${"justify-content-center"}`}
+                    >
                         <div
                             className={styles["restaurant-details-about-left"]}
                         >
@@ -50,11 +60,13 @@ export default function RestaurantDetails(props) {
                                     ]
                                 }
                             >
-                                {data.tags.map((tag) => (
-                                    <span>
-                                        {tag}
-                                        {", "}
-                                    </span>
+                                {data.tags.map((tag, i) => (
+                                    <React.Fragment key={i}>
+                                        <span>{tag}</span>
+                                        <span className={styles["tags-commas"]}>
+                                            {/* {", "} */}
+                                        </span>
+                                    </React.Fragment>
                                 ))}
                             </div>
                             <div
@@ -65,7 +77,7 @@ export default function RestaurantDetails(props) {
                                 }
                             >
                                 VARTHUR HOBLI, Rainbow Drive |
-                                <span
+                                <div
                                     className={
                                         styles[
                                             "restaurant-details-about-middle-address-first"
@@ -73,16 +85,16 @@ export default function RestaurantDetails(props) {
                                     }
                                 >
                                     Change Outlet
-                                </span>
-                                <span
+                                </div>
+                                <div
                                     className={
                                         styles[
                                             "restaurant-details-about-middle-address-arrow"
                                         ]
                                     }
                                 >
-                                    {">"}
-                                </span>
+                                    <img src={DownIcon} />
+                                </div>
                             </div>
                             <div
                                 className={
@@ -96,7 +108,11 @@ export default function RestaurantDetails(props) {
                                         className={styles["middle-extra-value"]}
                                     >
                                         <span>
-                                            <img src={star} width="13px" />
+                                            <img
+                                                src={StarIcon}
+                                                width="13px"
+                                                style={{ marginRight: "5px" }}
+                                            />
                                         </span>
                                         {data.rating}
                                     </div>
@@ -135,7 +151,49 @@ export default function RestaurantDetails(props) {
                         <div
                             className={styles["restaurant-details-about-right"]}
                         >
-                            sdd
+                            <fieldset>
+                                <legend>Offers</legend>
+                                <div
+                                    className={
+                                        styles[
+                                            "restaurant-details-about-right-offers"
+                                        ]
+                                    }
+                                >
+                                    {[
+                                        "Flat ₹100 off on orders above ₹249 | Use code FLAT100",
+                                        "50% off up to ₹100 | Use code TRYNEW",
+                                    ].map((offer, i) => (
+                                        <div
+                                            key={i}
+                                            className={
+                                                styles[
+                                                    "restaurant-details-about-right-offer"
+                                                ]
+                                            }
+                                        >
+                                            <div
+                                                className={
+                                                    styles[
+                                                        "restaurant-details-about-right-offer-image"
+                                                    ]
+                                                }
+                                            >
+                                                <img src={OfferIcon} />
+                                            </div>
+                                            <div
+                                                className={
+                                                    styles[
+                                                        "restaurant-details-about-right-offer-text"
+                                                    ]
+                                                }
+                                            >
+                                                {offer}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </fieldset>
                         </div>
                     </div>
                 </div>
