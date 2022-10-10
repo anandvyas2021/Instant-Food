@@ -4,8 +4,10 @@ import styles from "./styles.module.scss";
 import StarIcon from "assets/star.png";
 import OfferIcon from "assets/NavIcons/offer.png";
 import DownIcon from "assets/down.png";
+import HeartIcon from "assets/heart.png";
 
 import { restaurantData } from "utils/config";
+import Input from "components/BasicComponents/Input";
 
 export default function RestaurantDetails(props) {
     const location = useLocation();
@@ -144,6 +146,58 @@ export default function RestaurantDetails(props) {
                                         className={styles["middle-extra-text"]}
                                     >
                                         {data.cost}
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                className={
+                                    styles[
+                                        "restaurant-details-about-middle-filters"
+                                    ]
+                                }
+                            >
+                                <div
+                                    className={
+                                        styles[
+                                            "restaurant-details-about-filters-search"
+                                        ]
+                                    }
+                                >
+                                    <Input type="text" searchIcon />
+                                </div>
+                                <div
+                                    className={`${styles["restaurant-details-about-filters-type"]} ${styles["details-filter-options"]}`}
+                                >
+                                    <div
+                                        className={
+                                            styles[
+                                                "restaurant-details-about-filters-type-text"
+                                            ]
+                                        }
+                                    ></div>
+                                    <input type="checkbox" />
+                                    Veg Only
+                                </div>
+                                <div
+                                    className={` ${styles["restaurant-details-about-filters-fav"]} ${styles["details-filter-options"]}`}
+                                >
+                                    <div
+                                        className={
+                                            styles[
+                                                "restaurant-details-about-filters-fav-img"
+                                            ]
+                                        }
+                                    >
+                                        <img src={HeartIcon} />
+                                    </div>
+                                    <div
+                                        className={
+                                            styles[
+                                                "restaurant-details-about-filters-fav-text"
+                                            ]
+                                        }
+                                    >
+                                        Favourite
                                     </div>
                                 </div>
                             </div>

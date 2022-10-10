@@ -17,9 +17,7 @@
     }
 
     .home-body {
-        max-width: 1440px;
-        min-width: 1440px;
-        margin: 40px auto 0;
+        margin-top: 40px;
         display: flex;
         flex-direction: column;
         gap: 30px;
@@ -183,9 +181,6 @@
         .main-image-section {}
 
         .home-body {
-            // max-width: ;
-            // min-width: ;
-
             .home-restaurant-list-container {
                 box-sizing: border-box;
                 display: grid;
@@ -204,27 +199,18 @@
     .body-main-container {
         .main-image-section {}
 
-        .home-body {
-            // max-width: initial;
-            // min-width: initial;
-        }
+        .home-body {}
     }
 }
 
 @media only screen and (min-width: 1030px) and (max-width: 1366px) {
     .body-main-container {
-        .home-body {
-            // max-width: 1200px;
-            // min-width: 1200px;
-        }
+        .home-body {}
     }
 }
 
 @media only screen and (min-width: 1370px) and (max-width: 1630px) {
     .body-main-container {
-        .home-body {
-            max-width: 1200px;
-            min-width: 1200px;
-        }
+        .home-body {}
     }
 }

@@ -20,7 +20,11 @@ export default function Offers() {
     return (
         <div className={styles["offers-page"]}>
             <div className={styles["offers-banner-container"]}>
-                <div className={styles["offers-banner"]}>
+                <div
+                    className={`${
+                        styles["offers-banner"]
+                    } ${"justify-content-center"}`}
+                >
                     <div className={styles["offers-banner-inner"]}>
                         <div className={styles["offers-banner-label"]}>
                             <div className={styles["offers-banner-heading"]}>
@@ -38,11 +42,19 @@ export default function Offers() {
                 </div>
             </div>
 
-            <div className={styles["offers-tabs-container"]}>
+            <div
+                className={`${
+                    styles["offers-tabs-container"]
+                } ${"justify-content-center"}`}
+            >
                 <Tabs options={offersTabpanes} onClick={onClick} />
             </div>
 
-            <div className={styles["offers-body-container"]}>
+            <div
+                className={`${
+                    styles["offers-body-container"]
+                } ${"justify-content-center"}`}
+            >
                 <div className={styles["offers-body-header"]}>
                     <div className={styles["offers-body-heading"]}>
                         {offer === "restaurant"

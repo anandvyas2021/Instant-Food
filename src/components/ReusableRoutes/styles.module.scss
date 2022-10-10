@@ -11,8 +11,6 @@
 
         .reusable-header-container {
             box-sizing: border-box;
-            max-width: 1440px;
-            margin: 0px auto;
             padding: 40px 0 0 0;
             // background-color: cornflowerblue;
 
@@ -49,8 +47,6 @@
 
             .reusable-body-inner {
                 box-sizing: border-box;
-                max-width: 1440px;
-                margin: 0 auto;
                 padding: 30px 0 !important;
                 // background-color: rgb(248, 162, 48);
 
@@ -123,7 +119,6 @@
     .reusable-main-container {
         .reusable-inner-box {
             .reusable-header-container {
-                max-width: 1200px;
 
                 .reusable-header {
                     .reusable-header-details {
@@ -137,8 +132,6 @@
                 max-width: 1260px;
 
                 .reusable-body-inner {
-                    max-width: 1200px;
-
                     .reusable-body-content {
                         .reusable-body-menu {
                             min-width: 280px;

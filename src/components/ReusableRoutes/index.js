@@ -32,7 +32,11 @@ export default function ReusableRoutes(props) {
     return (
         <div className={styles["reusable-main-container"]}>
             <div className={styles["reusable-inner-box"]}>
-                <div className={styles["reusable-header-container"]}>
+                <div
+                    className={`${
+                        styles["reusable-header-container"]
+                    } ${"justify-content-center"}`}
+                >
                     <div className={styles["reusable-header"]}>
                         <div className={styles["reusable-header-left"]}>
                             <div className={styles["reusable-header-heading"]}>
@@ -51,7 +55,11 @@ export default function ReusableRoutes(props) {
                 </div>
 
                 <div className={styles["reusable-body"]}>
-                    <div className={styles["reusable-body-inner"]}>
+                    <div
+                        className={`${
+                            styles["reusable-body-inner"]
+                        } ${"justify-content-center"}`}
+                    >
                         <div className={styles["reusable-body-content"]}>
                             <div className={styles["reusable-body-menu"]}>
                                 <ul>

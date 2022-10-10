@@ -49,7 +49,9 @@ export default function Home(props) {
                 <img src={MealsImg} alt="Dishes on the table" />
             </div>
             <MealsSummary />
-            <div className={styles["home-body"]}>
+            <div
+                className={`${styles["home-body"]} ${"justify-content-center"}`}
+            >
                 <div className={styles["home-carousel-container"]}>
                     <Slick />
                 </div>

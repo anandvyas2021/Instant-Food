@@ -7,10 +7,7 @@
 
         .offers-banner {
             box-sizing: border-box;
-            max-width: 1440px;
-            min-width: 1440px;
             height: 100%;
-            margin: 0 auto;
             // background-color: chartreuse;
 
             .offers-banner-inner {
@@ -56,18 +53,13 @@
     }
 
     .offers-tabs-container {
-        min-width: 1440px;
-        max-width: 1440px;
-        margin: 0 auto;
         height: 80px;
         border-bottom: 2px solid #d4d5d9;
         // background-color: darkcyan;
     }
 
     .offers-body-container {
-        max-width: 1440px;
-        min-width: 1440px;
-        margin: 50px auto 0;
+        margin-top: 50px;
         // background-color: blueviolet;
 
         .offers-body-header {
@@ -105,29 +97,19 @@
     }
 }
 
-
-
 @media (min-width: 1025px) and (max-width: 1280px) {}
 
 
 @media only screen and (min-width: 1370px) and (max-width: 1605px) {
     .offers-page {
         .offers-banner-container {
-            .offers-banner {
-                max-width: 1200px;
-                min-width: 1200px;
-            }
+            .offers-banner {}
         }
 
         .offers-tabs-container {
-            min-width: 1200px;
-            max-width: 1200px;
             height: 60px;
         }
 
-        .offers-body-container {
-            min-width: 1200px;
-            max-width: 1200px;
-        }
+        .offers-body-container {}
     }
 }
